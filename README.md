@@ -1,80 +1,12 @@
-# ✈️ A1 Opportunities Africa – Travel & Study Abroad Consultancy
+# React + Vite
 
-Welcome to **A1 Opportunities Africa**, your trusted digital partner for international travel, study abroad programs, and visa assistance. We are committed to helping individuals unlock life-changing global opportunities through expert guidance and a seamless user experience.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## 🌍 About Us
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-A1 Opportunities Africa is a professional travel consultancy that connects students, tourists, and aspiring migrants with credible travel and education opportunities around the world. From visa processing to university applications, we are with you every step of the journey.
+## Expanding the ESLint configuration
 
----
-
-## 🔧 Built With
-
-- **React.js** – Frontend UI
-- **React Router DOM** – Seamless page routing
-- **Tailwind CSS** – Utility-first styling
-- **React Icons** – For scalable vector icons
-- **Framer Motion** – Smooth animations
-- **SweetAlert2** – Elegant popup messages
-- **EmailJS** – Contact form email integration
-
----
-
-
----
-
-## 💻 Features
-
-- Responsive Navigation Bar with links to pages
-- Stunning Hero Section with scroll animations
-- Services Page featuring custom cards and CTAs
-- About Us with history, mission, and vision
-- Client Testimonials in a beautiful grid
-- Responsive Footer with social icons and credits
-- Contact Form with EmailJS + SweetAlert2 for alerts
-
----
-
-## 🧩 UI Components Overview
-
-### 🔹 Navbar
-Responsive, sticky navbar with navigation links.
-
-### 🔹 Hero Section
-Customizable headline, subheading, image slideshow, and scroll-down animation.
-
-### 🔹 Services Page
-2-column layout with cards:
-- Visa Assistance
-- Career Coaching
-- Travel Bookings
-- University Application
-
-### 🔹 About Us
-Split-section layout:
-- Our History
-- What We Offer
-- Our Mission
-- Our Vision
-
-### 🔹 Client Testimonials
-- Dynamic feedback cards
-- Star ratings
-- Client image, feedback, and name
-
-### 🔹 Footer
-- Social icons (Facebook, Instagram, Twitter, etc.)
-- Contact (Email, Phone)
-- Designed with ❤️ by **Innovative Minds**
-
----
-
-## 📬 Contact Integration
-
-Email functionality powered by **EmailJS**.
-
-```jsx
-emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
