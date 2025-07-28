@@ -66,3 +66,8 @@ Built using:
 - Social media icons (Facebook, Instagram, LinkedIn, TikTok, etc.)
 - Contact details
 - Beautiful credit section:
+
+###🙌 Acknowledgements
+
+    Designed by Innovative Minds
+    Built with ❤️ using React, Tailwind CSS, and modern web tools
