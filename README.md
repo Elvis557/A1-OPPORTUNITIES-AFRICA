@@ -48,6 +48,7 @@ Welcome to **A1 Opportunities Africa**, your trusted digital partner for interna
 - Hero section with animated title and subtitle
 - Call-to-action buttons
 - Services preview
+<img width="1349" height="2303" alt="image" src="https://github.com/user-attachments/assets/e1b9b9eb-2b3c-40a9-8e22-6099e0e16c9f" />
 
 ### 👨‍💼 About Us
 - Brief history
