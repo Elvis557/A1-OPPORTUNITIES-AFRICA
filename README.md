@@ -48,22 +48,28 @@ Welcome to **A1 Opportunities Africa**, your trusted digital partner for interna
 - Hero section with animated title and subtitle
 - Call-to-action buttons
 - Services preview
-<img width="1349" height="2303" alt="image" src="https://github.com/user-attachments/assets/e1b9b9eb-2b3c-40a9-8e22-6099e0e16c9f" />
+-<img width="1349" height="2303" alt="image" src="https://github.com/user-attachments/assets/e1b9b9eb-2b3c-40a9-8e22-6099e0e16c9f" />
 
 ### 👨‍💼 About Us
 - Brief history
 - Our mission & vision with images
 - Two-column layout
+- <img width="1349" height="3123" alt="image" src="https://github.com/user-attachments/assets/556e0551-d496-40a9-8fbc-8e1c0e694a12" />
+
 
 ### 📋 Services Page
 - Visa assistance, travel consultation, and more
 - Cards layout for each service
 - Button links for inquiries
+- <img width="1349" height="2208" alt="image" src="https://github.com/user-attachments/assets/497dad4d-4c15-4db1-9bae-4698d0f6072d" />
+
 
 ### 🤝 Contact Page
-- EmailJS integration (optional)
+- EmailJS integration 
 - Beautiful animated form
 - SweetAlert2 confirmation messages
+- <img width="1349" height="2477" alt="image" src="https://github.com/user-attachments/assets/758f19e6-6a2f-4d42-a8ae-3563d926f43a" />
+
 
 ### ⭐ Testimonials
 - Display happy clients
