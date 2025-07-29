@@ -39,34 +39,34 @@ const Hero = ({
       style={{ backgroundImage: `url(${images[currentIndex]})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30 z-10" />
+      <div className="absolute inset-0 bg-black/50 z-10" />
 
       {/* Navbar */}
       <Navbar />
 
       {/* Hero Content */}
-      <div className="relative z-20 flex flex-1 items-center justify-center px-4 sm:px-6 lg:px-12 py-16">
+      <div className="relative z-20 mt-20 flex flex-1 items-center justify-center px-4 sm:px-8 lg:px-16 py-20">
         <div
-          className={`bg-black/30 backdrop-blur-md rounded-2xl p-4 sm:p-8 md:p-12 shadow-xl mt-35 w-full max-w-5xl ${textAlignClass}`}
+          className={`bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-10 md:p-14 shadow-2xl w-full max-w-6xl ${textAlignClass}`}
         >
-          <h1 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight drop-shadow-md">
             {heading}
             {showHighlight && (
-              <span className="text-blue-400 drop-shadow"> {highlight}</span>
+              <span className="text-blue-400 font-extrabold"> {highlight}</span>
             )}
           </h1>
-          
+
           {showSubtitle && (
-            <p className="mt-3 text-xs sm:text-sm md:text-base lg:text-lg text-gray-200 max-w-3xl mx-auto text-center">
+            <p className={`mt-6 text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 max-w-3xl ${alignLeft || alignRight ? '' : 'mx-auto text-center'}`}>
               {subtitle}
             </p>
           )}
 
           {location.pathname === '/' && (
-            <div className="mt-5">
+            <div className="mt-8">
               <Link
                 to="/services"
-                className="inline-block px-5 py-2 rounded-full bg-blue-700 hover:bg-blue-700 text-white font-semibold transition duration-300 text-sm sm:text-base"
+                className="inline-block px-6 py-3 rounded-full bg-blue-700 hover:bg-blue-800 text-white font-medium text-base transition-all duration-300 shadow-md"
               >
                 Discover
               </Link>
@@ -77,7 +77,7 @@ const Hero = ({
 
       {/* Dots Navigation */}
       {showDots && images.length > 1 && (
-        <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-30">
+        <div className="absolute bottom-6 left-0 right-0 flex justify-center items-center gap-3 z-30">
           {images.map((_, i) => (
             <button
               key={i}
@@ -86,7 +86,7 @@ const Hero = ({
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 currentIndex === i
                   ? 'bg-white scale-110'
-                  : 'bg-white/40 hover:bg-white/70'
+                  : 'bg-white/40 hover:bg-white/80'
               }`}
             />
           ))}
