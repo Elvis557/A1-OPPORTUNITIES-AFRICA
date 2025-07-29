@@ -1,20 +1,21 @@
 {
-  "name": "a1-opportunity-client",
+  "name": "a1-opportunity",
   "version": "1.0.0",
-  "description": "React + Vite project for A1 Opportunities Africa",
-  "type": "module",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.7.0",
-    "rollup": "^3.29.5",
-    "vite": "^5.4.19"
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.0"
   }
 }
