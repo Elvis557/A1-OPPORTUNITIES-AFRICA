@@ -13,7 +13,7 @@ import logo from "../assets/logo.jpg";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-blue-900 text-white px-4 sm:px-6  md:px-12 py-16 pb-32">
+      <footer className="bg-blue-1000 text-white px-4 sm:px-6  md:px-12 py-16 pb-32">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 pt-8 pb-15 text-center sm:text-center">
           {/* Contact Form */}
           <div>
