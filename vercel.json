@@ -1,9 +1,10 @@
 {
+  "buildCommand": "cd client && npm run build",
+  "installCommand": "cd client && npm install",
+  "outputDirectory": "client/dist",
   "build": {
     "env": {
       "NODE_ENV": "production"
     }
-  },
-  "buildCommand": "npm run build",
-  "installCommand": "npm install"
+  }
 }
