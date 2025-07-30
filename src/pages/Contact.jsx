@@ -80,7 +80,7 @@ const Contact = () => {
                   id="name"
                   name="name"
                   placeholder="Your name"
-                  className="w-full text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full bg-black text-white md:bg-white md:text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                   required
                 />
               </div>
@@ -92,7 +92,7 @@ const Contact = () => {
                   id="email"
                   name="email"
                   placeholder="Your email address"
-                  className="w-full border text-black border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full bg-black text-white md:bg-white md:text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                   required
                 />
               </div>
@@ -104,7 +104,7 @@ const Contact = () => {
                   id="location"
                   name="location"
                   placeholder="Your location"
-                  className="w-full text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full bg-black text-white md:bg-white md:text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                 />
               </div>
 
@@ -115,14 +115,14 @@ const Contact = () => {
                   name="message"
                   rows="5"
                   placeholder="Your message"
-                  className="w-full text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full bg-black text-white md:bg-white md:text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                   required
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-black text-white font-semibold py-3 rounded-full transition"
+                className="w-full bg-black text-white font-semibold py-3 rounded-full transition hover:bg-gray-900"
               >
                 Submit
               </button>
