@@ -80,7 +80,7 @@ const Contact = () => {
                   id="name"
                   name="name"
                   placeholder="Your name"
-                  className="w-full bg-black text-white md:bg-white md:text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
+                  className="w-full bg-white text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                   required
                 />
               </div>
@@ -92,7 +92,7 @@ const Contact = () => {
                   id="email"
                   name="email"
                   placeholder="Your email address"
-                  className="w-full bg-black text-white md:bg-white md:text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
+                  className="w-full bg-white text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                   required
                 />
               </div>
@@ -104,7 +104,7 @@ const Contact = () => {
                   id="location"
                   name="location"
                   placeholder="Your location"
-                  className="w-full bg-black text-white md:bg-white md:text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
+                  className="w-full bg-white text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                 />
               </div>
 
@@ -115,7 +115,7 @@ const Contact = () => {
                   name="message"
                   rows="5"
                   placeholder="Your message"
-                  className="w-full bg-black text-white md:bg-white md:text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
+                  className="w-full bg-white text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                   required
                 />
               </div>
@@ -128,6 +128,7 @@ const Contact = () => {
               </button>
             </form>
           </div>
+
         </section>
       </div>
 
