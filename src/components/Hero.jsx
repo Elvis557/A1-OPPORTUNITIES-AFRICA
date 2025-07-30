@@ -45,7 +45,7 @@ const Hero = ({
       <Navbar />
 
       {/* Hero Content */}
-      <div className="relative z-20 mt-20 flex flex-1 items-center justify-center px-4 sm:px-8 lg:px-16 py-20">
+      <div className="relative z-20 mt-32 flex flex-1 items-center justify-center px-4 sm:px-8 lg:px-16 py-20">
         <div
           className={`bg-black/40 backdrop-blur-md rounded-2xl p-6 sm:p-10 md:p-14 shadow-2xl w-full max-w-6xl ${textAlignClass}`}
         >
@@ -74,7 +74,6 @@ const Hero = ({
           )}
         </div>
       </div>
-
       {/* Dots Navigation */}
       {showDots && images.length > 1 && (
         <div className="absolute bottom-6 left-0 right-0 flex justify-center items-center gap-3 z-30">
