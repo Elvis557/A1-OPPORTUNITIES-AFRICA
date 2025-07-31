@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -85,12 +86,12 @@ const Services = () => {
           </div>
 
           {/* Discover More button */}
-          <a
-            href="/services"
+          < Link 
+            to="/services"
             className="inline-block mt-12 px-8 py-3 bg-black text-white font-semibold rounded-lg transition duration-300"
           >
             Discover More
-          </a>
+          </Link>
         </div>
       </section>
 
