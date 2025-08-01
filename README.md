@@ -73,7 +73,9 @@ Welcome to **A1 Opportunities Africa**, your trusted digital partner for interna
 
 ### ⭐ Testimonials
 - Display happy clients
-- Each includes photo, star rating, name, and feedback
+- Each includes photo, star rating, name, and feedback7
+- <img width="1349" height="534" alt="image" src="https://github.com/user-attachments/assets/3fdfedc0-e310-4334-9e4c-8d087d14f55f" />
+
 
 ---
 
