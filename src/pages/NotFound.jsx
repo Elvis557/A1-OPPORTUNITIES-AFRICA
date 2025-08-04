@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import img from "../assets/first.jpg"; // Keep this or update it to the correct screenshot
+import img from "../assets/first.jpg"; 
 
 const NotFound = () => {
   return (
@@ -45,3 +45,4 @@ const NotFound = () => {
 };
 
 export default NotFound;
+
