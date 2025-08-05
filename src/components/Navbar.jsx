@@ -77,7 +77,7 @@ const Navbar = () => {
             className="h-12 w-12 rounded-full object-cover shadow-md hover:shadow-pink-300 hover:scale-105 transition duration-300"
             loading="lazy"
           />
-          <span className="text-lg md:text-2xl font-bold uppercase tracking-wide text-gray-800 hover:text-blue-600 transition duration-300">
+          <span className="text-lg md:text-2xl font-bold uppercase tracking-wide text-gray-800 hover:text-blue-1000 transition duration-300">
             A1 Opportunities Africa
           </span>
         </Link>
