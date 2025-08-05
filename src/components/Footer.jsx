@@ -8,16 +8,17 @@ import {
   FaPhone,
   FaEnvelope,
 } from "react-icons/fa";
+import { Link } from "react-router-dom"; 
 import logo from "../assets/logo.jpg";
 
 const Footer = () => {
   return (
     <>
-      <footer className="bg-blue-1000 text-white px-4 sm:px-6  md:px-12 py-16 pb-32">
+      <footer className="bg-blue-1000 text-white px-4 sm:px-6 md:px-12 py-16 pb-32">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 pt-8 pb-15 text-center sm:text-center">
           {/* Contact Form */}
           <div>
-            <h3 className="text-2xl font-semibold mb-4 ">Contact Us</h3>
+            <h3 className="text-2xl font-semibold mb-4">Contact Us</h3>
             <p className="text-sm mb-4 text-white/70">Send us a message</p>
             <form className="space-y-3">
               <input
@@ -37,7 +38,7 @@ const Footer = () => {
               ></textarea>
               <button
                 type="submit"
-                className="w-full bg-white  text-black font-semibold py-2 rounded transition duration-300"
+                className="w-full bg-white text-black font-semibold py-2 rounded transition duration-300"
               >
                 Submit
               </button>
@@ -50,24 +51,24 @@ const Footer = () => {
             <p className="text-sm mb-4 text-white/70">Navigate the site</p>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="/" className="hover:text-yellow-400 transition">
+                <Link to="/" className="hover:text-yellow-400 transition">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about" className="hover:text-yellow-400 transition">
+                <Link to="/about" className="hover:text-yellow-400 transition">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/services" className="hover:text-yellow-400 transition">
+                <Link to="/services" className="hover:text-yellow-400 transition">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="hover:text-yellow-400 transition">
+                <Link to="/contact" className="hover:text-yellow-400 transition">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -86,26 +87,39 @@ const Footer = () => {
               <p className="flex items-center gap-2 justify-center md:justify-start">
                 <a
                   href="mailto:opportunities.a1africa@gmail.com"
-                  className="flex items-center gap-2 text-yellow-400 "
+                  className="flex items-center gap-2 text-yellow-400"
                 >
                   <FaEnvelope />
-                  <span className="text-white ">opportunities.a1africa@gmail.com</span>
+                  <span className="text-white">opportunities.a1africa@gmail.com</span>
                 </a>
               </p>
-
             </div>
             <p className="text-2xl mb-2 mt-5 font-bold">Follow Us:</p>
             <div className="flex space-x-5 text-3xl">
-              <a href="#" className="hover:text-blue-900 text-blue-800 transition">
+              <a
+                href="#"
+                className="hover:text-blue-900 text-blue-800 transition"
+              >
                 <FaFacebook />
               </a>
-              <a href="#" className="text-red-500 hover:text-red-700 color- transition">
+              <a
+                href="#"
+                className="text-red-500 hover:text-red-700 transition"
+              >
                 <FaInstagram />
               </a>
-              <a href="#" className="text-blue-500 hover:text-blue-600 transition">
+              <a
+                href="#"
+                className="text-blue-500 hover:text-blue-600 transition"
+              >
                 <FaLinkedin />
               </a>
-              <a href="https://www.tiktok.com/discover/a1-opportunities-africa-europe-job-consult" className=" text-white-500 transition">
+              <a
+                href="https://www.tiktok.com/discover/a1-opportunities-africa-europe-job-consult"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white-500 transition"
+              >
                 <FaTiktok />
               </a>
             </div>
