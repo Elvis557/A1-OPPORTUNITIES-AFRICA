@@ -81,11 +81,18 @@ const Footer = () => {
             />
             <div className="text-sm space-y-2 mb-6">
               <p className="flex items-center gap-2 justify-center md:justify-start">
-                <FaPhone className="text-yellow-400" /> +233 55 123 4567
+                <FaPhone className="text-yellow-400" /> +233 24 757 8194
               </p>
               <p className="flex items-center gap-2 justify-center md:justify-start">
-                <FaEnvelope className="text-yellow-400" /> info@yourcompany.com
+                <a
+                  href="mailto:opportunities.a1africa@gmail.com"
+                  className="flex items-center gap-2 text-yellow-400 "
+                >
+                  <FaEnvelope />
+                  <span className="text-white ">opportunities.a1africa@gmail.com</span>
+                </a>
               </p>
+
             </div>
             <p className="text-2xl mb-2 mt-5 font-bold">Follow Us:</p>
             <div className="flex space-x-5 text-3xl">
@@ -98,7 +105,7 @@ const Footer = () => {
               <a href="#" className="text-blue-500 hover:text-blue-600 transition">
                 <FaLinkedin />
               </a>
-              <a href="#" className="hover:text-yellow-400 transition">
+              <a href="https://www.tiktok.com/discover/a1-opportunities-africa-europe-job-consult" className=" text-white-500 transition">
                 <FaTiktok />
               </a>
             </div>
