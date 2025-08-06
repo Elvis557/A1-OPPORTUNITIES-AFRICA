@@ -43,6 +43,8 @@ const column2 = [
 ];
 
 const Servicepages = () => {
+  const formLink = "https://forms.gle/pYKKdJPN5uBqJie2A";
+
   return (
     <>
       <Navbar />
@@ -74,9 +76,14 @@ const Servicepages = () => {
                 {item.text}
               </p>
               <div className="mt-auto flex justify-center">
-                <button className="bg-gray-700 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-200">
+                <a
+                  href={formLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gray-700 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-200"
+                >
                   Apply Now
-                </button>
+                </a>
               </div>
             </div>
           ))}
