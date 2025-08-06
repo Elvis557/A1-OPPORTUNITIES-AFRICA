@@ -23,7 +23,7 @@ Welcome to **A1 Opportunities Africa**, your trusted digital partner for interna
 - 🎥 Hero section with optional video/image
 - ✉️ Contact form (customized with animations)
 - ⭐ Client testimonials with star ratings
-- 📞 Social media and contact integration
+- 📞 Social media, whatsapp widget integration, and contact integration
 - 🎨 Tailwind CSS utility-first styling
 - 🔗 Deployed on **Vercel** with continuous integration via GitHub
 
