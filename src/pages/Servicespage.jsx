@@ -67,27 +67,28 @@ const Servicepages = () => {
           {[...column1, ...column2].map((item, index) => (
             <div
               key={index}
-              className="bg-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full min-h-[240px]"
+              className="bg-gray-200 rounded-lg shadow-md p-6 flex flex-col h-full min-h-[200px]"
             >
-              <h3 className="text-xl font-semibold text-center mb-4 text-gray-700">
+              <h3 className="text-xl font-semibold text-center mt-4 mb-4 text-gray-700">
                 {item.title}
               </h3>
               <p className="text-gray-600 text-sm text-center mb-6 flex-1">
                 {item.text}
               </p>
-              <div className="mt-auto flex justify-center">
+            </div>
+          ))}
+          
+          </div>
+             <div className="mt-11 flex justify-center">
                 <a
                   href={formLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-gray-700 text-white px-6 py-2 rounded hover:bg-blue-700 transition duration-200"
+                  className="bg-gray-700 text-lg text-white px-10 py-6 rounded hover:bg-blue-700 transition duration-200"
                 >
                   Apply Now
                 </a>
-              </div>
-            </div>
-          ))}
-        </div>
+          </div>
       </section>
 
       <Footer />
