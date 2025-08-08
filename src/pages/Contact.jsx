@@ -40,7 +40,8 @@ const Contact = () => {
               <FiPhone className="text-3xl text-blue-600 mt-1" />
               <div>
                 <h3 className="font-semibold text-lg text-gray-800">Call Us</h3>
-                <p className="text-gray-600">+233 247578194</p>
+                <p className="text-gray-600">+233 556172347</p>
+                <p className="text-gray-600">+233 550271770</p>
               </div>
             </div>
 
@@ -48,9 +49,7 @@ const Contact = () => {
               <FiMail className="text-3xl text-blue-600 mt-1" />
               <div>
                 <h3 className="font-semibold text-lg text-gray-800">Email Us</h3>
-                <a href="mailto:opportunities.a1africa@gmail.com">
-                  <p className="text-gray-600">opportunities.a1africa@gmail.com</p>
-                </a>
+                <p className="text-gray-600">email@address.com</p>
               </div>
             </div>
 
@@ -61,45 +60,16 @@ const Contact = () => {
                 <p className="text-gray-600">Spintex, Accra</p>
                 <p className="text-gray-600">Carpenter's Junction, Kasoa</p>
                 <div className="flex items-center gap-6 mt-4 text-blue-600 text-3xl">
-                  <a
-                    href="https://www.tiktok.com/@a1.opportunities?_t=ZM-8yd8UONYglS&_r=1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  > 
-                    <FaTiktok className="cursor-pointer hover:text-blue-800" />
-                  </a>
-
-                  <a 
-                    href="https://facebook.com/groups/561947633211040/"
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <FiFacebook className="cursor-pointer hover:text-blue-800" />
-                  </a>
-
-                  <a
-                    href=""
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    <FiInstagram className="cursor-pointer hover:text-blue-800" />
-                  </a>
-
-                  <a
-                   href=""
-                   target='_blank'
-                   rel='noopener noreferrer'
-                  >
-                    <FiLinkedin className="cursor-pointer hover:text-blue-800" />
-
-                  </a>
-                  
+                  <FaTiktok className="cursor-pointer hover:text-blue-800" />
+                  <FiFacebook className="cursor-pointer hover:text-blue-800" />
+                  <FiInstagram className="cursor-pointer hover:text-blue-800" />
+                  <FiLinkedin className="cursor-pointer hover:text-blue-800" />
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column */} 
+          {/* Right Column */}
           <div className="bg-gray-100 p-10 rounded-lg shadow-md max-w-md mx-auto">
             <h3 className="text-3xl font-semibold text-gray-800 mb-8">Leave a Message</h3>
             <form className="space-y-6">
@@ -182,3 +152,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
