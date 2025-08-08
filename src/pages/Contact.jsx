@@ -48,7 +48,9 @@ const Contact = () => {
               <FiMail className="text-3xl text-blue-600 mt-1" />
               <div>
                 <h3 className="font-semibold text-lg text-gray-800">Email Us</h3>
-                <p className="text-gray-600">opportunities.a1africa@gmail.com</p>
+                <a href="mailto:opportunities.a1africa@gmail.com">
+                  <p className="text-gray-600">opportunities.a1africa@gmail.com</p>
+                </a>
               </div>
             </div>
 
