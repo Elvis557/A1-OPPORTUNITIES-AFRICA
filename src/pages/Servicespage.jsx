@@ -43,7 +43,8 @@ const column2 = [
 ];
 
 const Servicepages = () => {
-  const formLink = "https://forms.gle/pYKKdJPN5uBqJie2A";
+  const formLink = "https://docs.google.com/forms/d/e/1FAIpQLSfd7LLPyAq_HqNBu0LBYMwZoiVjOwn5VCgTdJK21I2Qpkrv1g/viewform?usp=sharing&ouid=107794680162917214993";
+;
 
   return (
     <>
