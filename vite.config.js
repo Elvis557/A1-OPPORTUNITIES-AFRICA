@@ -4,9 +4,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.PNG', '**/*.WEBP'],
+  optimizeDeps: {
+    include: ['sweetalert2', '@emailjs/browser']
+  },
   build: {
-    rollupOptions: {
-      external: ['sweetalert2']
+    commonjsOptions: {
+      include: [/sweetalert2/, /node_modules/]
     }
   }
 })
