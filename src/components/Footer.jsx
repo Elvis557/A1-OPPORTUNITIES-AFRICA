@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import {
   FaFacebook,
   FaInstagram,
@@ -14,9 +14,11 @@ import logo from "../assets/logo.jpg";
 
 const Footer = () => {
   const formRef = useRef();
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     Swal.fire({
       title: "Sending...",
@@ -34,25 +36,25 @@ const Footer = () => {
         formRef.current,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
-      .then(
-        () => {
-          Swal.fire({
-            icon: "success",
-            title: "Message Sent!",
-            text: "We’ve received your message and will get back to you soon.",
-            confirmButtonColor: "#FFD700", // gold, like Ballon d'Or
-          });
-          formRef.current.reset();
-        },
-        () => {
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Failed to send your message. Please try again later.",
-            confirmButtonColor: "#d33",
-          });
-        }
-      );
+      .then(() => {
+        setLoading(false);
+        Swal.fire({
+          icon: "success",
+          title: "Message Sent!",
+          text: "We’ve received your message and will get back to you soon.",
+          confirmButtonColor: "#FFD700",
+        });
+        formRef.current.reset();
+      })
+      .catch(() => {
+        setLoading(false);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Failed to send your message. Please try again later.",
+          confirmButtonColor: "#d33",
+        });
+      });
   };
 
   return (
@@ -69,27 +71,39 @@ const Footer = () => {
                 name="user_name"
                 placeholder="Full Name"
                 required
+                aria-label="Full Name"
                 className="w-full p-3 rounded bg-[#003366] text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                disabled={loading}
               />
               <input
                 type="email"
                 name="user_email"
                 placeholder="Email Address"
                 required
+                aria-label="Email Address"
                 className="w-full p-3 rounded bg-[#003366] text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                disabled={loading}
               />
               <textarea
                 name="message"
                 placeholder="Your Message"
                 rows="3"
                 required
+                aria-label="Your Message"
                 className="w-full p-3 rounded bg-[#003366] text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-600"
+                disabled={loading}
               ></textarea>
               <button
                 type="submit"
-                className="w-full bg-white text-black font-semibold py-2 rounded transition duration-300 hover:bg-yellow-400 hover:text-black"
+                aria-label="Send your message"
+                disabled={loading}
+                className={`w-full font-semibold py-2 rounded transition duration-300 ${
+                  loading
+                    ? "bg-gray-400 cursor-not-allowed text-gray-700"
+                    : "bg-white text-black hover:bg-yellow-400 hover:text-black"
+                }`}
               >
-                Submit
+                {loading ? "Sending..." : "Submit"}
               </button>
             </form>
           </div>
@@ -149,6 +163,8 @@ const Footer = () => {
             <div className="flex space-x-5 text-3xl">
               <a
                 href="https://facebook.com/groups/561947633211040/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-blue-900 text-blue-800 transition"
               >
                 <FaFacebook />
