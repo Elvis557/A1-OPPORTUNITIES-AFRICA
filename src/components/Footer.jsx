@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import {
   FaFacebook,
   FaTwitter,
@@ -9,31 +9,64 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { Link } from "react-router-dom"; 
+import emailjs from "@emailjs/browser";
 import logo from "../assets/logo.jpg";
 
 const Footer = () => {
+  const formRef = useRef();
+  const [status, setStatus] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, // from your .env file
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setStatus("Message sent successfully!");
+          formRef.current.reset();
+        },
+        () => {
+          setStatus("Failed to send. Try again later.");
+        }
+      );
+  };
+
   return (
     <>
       <footer className="bg-blue-1000 text-white px-4 sm:px-6 md:px-12 py-16 pb-32">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 pt-8 pb-15 text-center sm:text-center">
+          
           {/* Contact Form */}
           <div>
             <h3 className="text-2xl font-semibold mb-4">Contact Us</h3>
             <p className="text-sm mb-4 text-white/70">Send us a message</p>
-            <form className="space-y-3">
+            <form ref={formRef} onSubmit={sendEmail} className="space-y-3">
               <input
                 type="text"
+                name="user_name"
                 placeholder="Full Name"
+                required
                 className="w-full p-3 rounded bg-[#003366] text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-600"
               />
               <input
                 type="email"
+                name="user_email"
                 placeholder="Email Address"
+                required
                 className="w-full p-3 rounded bg-[#003366] text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-600"
               />
               <textarea
+                name="message"
                 placeholder="Your Message"
                 rows="3"
+                required
                 className="w-full p-3 rounded bg-[#003366] text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-600"
               ></textarea>
               <button
@@ -42,6 +75,7 @@ const Footer = () => {
               >
                 Submit
               </button>
+              {status && <p className="text-sm mt-2">{status}</p>}
             </form>
           </div>
 
@@ -97,7 +131,7 @@ const Footer = () => {
             <p className="text-2xl mb-2 mt-5 font-bold">Follow Us:</p>
             <div className="flex space-x-5 text-3xl">
               <a
-                href="#"
+                href="https://facebook.com/groups/561947633211040/"
                 className="hover:text-blue-900 text-blue-800 transition"
               >
                 <FaFacebook />
@@ -115,7 +149,7 @@ const Footer = () => {
                 <FaLinkedin />
               </a>
               <a
-                href="https://www.tiktok.com/discover/a1-opportunities-africa-europe-job-consult"
+                href="https://www.tiktok.com/@a1.opportunities?_t=ZM-8yd8UONYglS&_r=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white-500 transition"
