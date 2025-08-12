@@ -1,8 +1,8 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Hero from '../components/Hero';
-import second from '../assets/second.jpg';
+import React, { useState } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
+import second from "../assets/second.jpg";
 import {
   FiPhone,
   FiMail,
@@ -11,13 +11,58 @@ import {
   FiInstagram,
   FiLinkedin,
 } from "react-icons/fi";
-import { FaTiktok } from "react-icons/fa"; 
+import { FaTiktok } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    location: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  // Handle input changes
+  const handleChange = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  // Send EmailJS email
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    const templateParams = {
+      name: formData.name,
+      user_email: formData.email,
+      location: formData.location,
+      message: formData.message,
+      time: new Date().toLocaleString(),
+    };
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setStatus("Message sent successfully!");
+          setFormData({ name: "", email: "", location: "", message: "" });
+        },
+        () => {
+          setStatus("Failed to send. Please try again later.");
+        }
+      );
+  };
+
   return (
     <>
       <Navbar />
-      <Hero 
+      <Hero
         images={[second]}
         heading="Contact Us"
         showHighlight={false}
@@ -25,7 +70,7 @@ const Contact = () => {
         showDots={false}
         alignLeft={false}
       />
-      
+
       <div className="w-full bg-white py-16 pt-25">
         <section className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-16 bg-white">
           {/* Left Column */}
@@ -49,7 +94,9 @@ const Contact = () => {
               <div>
                 <h3 className="font-semibold text-lg text-gray-800">Email Us</h3>
                 <a href="mailto:opportunities.a1africa@gmail.com">
-                  <p className="text-gray-600">opportunities.a1africa@gmail.com</p>
+                  <p className="text-gray-600">
+                    opportunities.a1africa@gmail.com
+                  </p>
                 </a>
               </div>
             </div>
@@ -57,58 +104,59 @@ const Contact = () => {
             <div className="flex items-start gap-4">
               <FiMapPin className="text-3xl text-blue-600 mt-1" />
               <div>
-                <h3 className="font-semibold text-lg text-gray-800">Locate Us At</h3>
+                <h3 className="font-semibold text-lg text-gray-800">
+                  Locate Us At
+                </h3>
                 <p className="text-gray-600">Spintex, Accra</p>
                 <p className="text-gray-600">Carpenter's Junction, Kasoa</p>
                 <div className="flex items-center gap-6 mt-4 text-blue-600 text-3xl">
                   <a
                     href="https://www.tiktok.com/@a1.opportunities?_t=ZM-8yd8UONYglS&_r=1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  > 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <FaTiktok className="cursor-pointer hover:text-blue-800" />
                   </a>
 
-                  <a 
+                  <a
                     href="https://facebook.com/groups/561947633211040/"
-                    target='_blank'
-                    rel='noopener noreferrer'
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <FiFacebook className="cursor-pointer hover:text-blue-800" />
                   </a>
 
-                  <a
-                    href=""
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
+                  <a href="" target="_blank" rel="noopener noreferrer">
                     <FiInstagram className="cursor-pointer hover:text-blue-800" />
                   </a>
 
-                  <a
-                   href=""
-                   target='_blank'
-                   rel='noopener noreferrer'
-                  >
+                  <a href="" target="_blank" rel="noopener noreferrer">
                     <FiLinkedin className="cursor-pointer hover:text-blue-800" />
-
                   </a>
-                  
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column */} 
+          {/* Right Column */}
           <div className="bg-gray-100 p-10 rounded-lg shadow-md max-w-md mx-auto">
-            <h3 className="text-3xl font-semibold text-gray-800 mb-8">Leave a Message</h3>
-            <form className="space-y-6">
+            <h3 className="text-3xl font-semibold text-gray-800 mb-8">
+              Leave a Message
+            </h3>
+            <form onSubmit={sendEmail} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block mb-2 font-medium text-gray-700">Name</label>
+                <label
+                  htmlFor="name"
+                  className="block mb-2 font-medium text-gray-700"
+                >
+                  Name
+                </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   placeholder="Your name"
                   className="w-full bg-white text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                   required
@@ -116,11 +164,18 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block mb-2 font-medium text-gray-700">Email</label>
+                <label
+                  htmlFor="email"
+                  className="block mb-2 font-medium text-gray-700"
+                >
+                  Email
+                </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   placeholder="Your email address"
                   className="w-full bg-white text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                   required
@@ -128,21 +183,35 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="location" className="block mb-2 font-medium text-gray-700">Location</label>
+                <label
+                  htmlFor="location"
+                  className="block mb-2 font-medium text-gray-700"
+                >
+                  Location
+                </label>
                 <input
                   type="text"
                   id="location"
                   name="location"
+                  value={formData.location}
+                  onChange={handleChange}
                   placeholder="Your location"
                   className="w-full bg-white text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block mb-2 font-medium text-gray-700">Message</label>
+                <label
+                  htmlFor="message"
+                  className="block mb-2 font-medium text-gray-700"
+                >
+                  Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   rows="5"
                   placeholder="Your message"
                   className="w-full bg-white text-black border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
@@ -156,9 +225,18 @@ const Contact = () => {
               >
                 Submit
               </button>
+
+              {status && (
+                <p
+                  className={`mt-4 text-center ${
+                    status.includes("❌") ? "text-red-600" : "text-green-600"
+                  }`}
+                >
+                  {status}
+                </p>
+              )}
             </form>
           </div>
-
         </section>
       </div>
 
