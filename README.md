@@ -1,4 +1,4 @@
-# ✈️ A1 Opportunities Africa.
+# ✈️ A1 Opportunities Africa
 
 Welcome to **A1 Opportunities Africa**, your trusted digital partner for international travel, study abroad programs, and visa assistance. We are committed to helping individuals unlock life-changing global opportunities through expert guidance and a seamless user experience.
 
