@@ -3,5 +3,10 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-   assetsInclude: ['**/*.PNG', '**/*.WEBP']
+  assetsInclude: ['**/*.PNG', '**/*.WEBP'],
+  build: {
+    rollupOptions: {
+      external: ['sweetalert2']
+    }
+  }
 })
