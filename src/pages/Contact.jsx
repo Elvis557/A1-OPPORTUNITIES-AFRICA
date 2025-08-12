@@ -13,6 +13,7 @@ import {
 } from "react-icons/fi";
 import { FaTiktok } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,17 +22,22 @@ const Contact = () => {
     location: "",
     message: "",
   });
-  const [status, setStatus] = useState("");
 
-  // Handle input changes
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  // Send EmailJS email
   const sendEmail = (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+
+    Swal.fire({
+      title: "Sending Message...",
+      text: "Please wait while we process your request",
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+    });
 
     const templateParams = {
       name: formData.name,
@@ -48,15 +54,23 @@ const Contact = () => {
         templateParams,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
-      .then(
-        () => {
-          setStatus("Message sent successfully!");
-          setFormData({ name: "", email: "", location: "", message: "" });
-        },
-        () => {
-          setStatus("Failed to send. Please try again later.");
-        }
-      );
+      .then(() => {
+        Swal.fire({
+          title: "Message Sent!",
+          text: "We have received your inquiry and will get back to you soon.",
+          icon: "success",
+          confirmButtonColor: "#2563eb",
+        });
+        setFormData({ name: "", email: "", location: "", message: "" });
+      })
+      .catch(() => {
+        Swal.fire({
+          title: "Failed to Send",
+          text: "Something went wrong. Please try again later.",
+          icon: "error",
+          confirmButtonColor: "#d33",
+        });
+      });
   };
 
   return (
@@ -225,16 +239,6 @@ const Contact = () => {
               >
                 Submit
               </button>
-
-              {status && (
-                <p
-                  className={`mt-4 text-center ${
-                    status.includes("❌") ? "text-red-600" : "text-green-600"
-                  }`}
-                >
-                  {status}
-                </p>
-              )}
             </form>
           </div>
         </section>
