@@ -1,39 +1,56 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import {
   FaFacebook,
-  FaTwitter,
   FaInstagram,
   FaLinkedin,
   FaTiktok,
   FaPhone,
   FaEnvelope,
 } from "react-icons/fa";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 import logo from "../assets/logo.jpg";
 
 const Footer = () => {
   const formRef = useRef();
-  const [status, setStatus] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+
+    Swal.fire({
+      title: "Sending...",
+      text: "Please wait while we process your message.",
+      allowOutsideClick: false,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+    });
 
     emailjs
       .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID, // from your .env file
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
-          setStatus("Message sent successfully!");
+          Swal.fire({
+            icon: "success",
+            title: "Message Sent!",
+            text: "We’ve received your message and will get back to you soon.",
+            confirmButtonColor: "#FFD700", // gold, like Ballon d'Or
+          });
           formRef.current.reset();
         },
         () => {
-          setStatus("Failed to send. Try again later.");
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Failed to send your message. Please try again later.",
+            confirmButtonColor: "#d33",
+          });
         }
       );
   };
@@ -42,7 +59,6 @@ const Footer = () => {
     <>
       <footer className="bg-blue-1000 text-white px-4 sm:px-6 md:px-12 py-16 pb-32">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 pt-8 pb-15 text-center sm:text-center">
-          
           {/* Contact Form */}
           <div>
             <h3 className="text-2xl font-semibold mb-4">Contact Us</h3>
@@ -71,11 +87,10 @@ const Footer = () => {
               ></textarea>
               <button
                 type="submit"
-                className="w-full bg-white text-black font-semibold py-2 rounded transition duration-300"
+                className="w-full bg-white text-black font-semibold py-2 rounded transition duration-300 hover:bg-yellow-400 hover:text-black"
               >
                 Submit
               </button>
-              {status && <p className="text-sm mt-2">{status}</p>}
             </form>
           </div>
 
@@ -124,7 +139,9 @@ const Footer = () => {
                   className="flex items-center gap-2 text-yellow-400"
                 >
                   <FaEnvelope />
-                  <span className="text-white">opportunities.a1africa@gmail.com</span>
+                  <span className="text-white">
+                    opportunities.a1africa@gmail.com
+                  </span>
                 </a>
               </p>
             </div>
