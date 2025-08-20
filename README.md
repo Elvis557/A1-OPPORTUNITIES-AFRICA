@@ -1,6 +1,7 @@
+![logo](https://github.com/user-attachments/assets/c9bd535d-2388-4eb6-a8c4-9c5cb78a5bf0)
 <!-- Banner / Cover -->
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/e1b9b9eb-2b3c-40a9-8e22-6099e0e16c9f" alt="A1 Opportunities Africa Banner" width="100%" style="border-radius:12px;" />
+  <img src="https://github.com/user-attachments/assets/e1b9b9eb-2b3c-40a9-8e22-6099e0e16c9" alt="A1 Opportunities Africa Banner" width="100%" style="border-radius:12px;" />
 </p>
 
 <h1 align="center">✈️ A1 Opportunities Africa</h1>
