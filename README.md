@@ -1,46 +1,47 @@
-# ✈️ A1 Opportunities Africa  
-
+<!-- Banner / Cover -->
 <p align="center">
-  <b>Your trusted digital partner for international travel, study abroad programs, and visa assistance.</b>  
+  <img src="https://github.com/user-attachments/assets/e1b9b9eb-2b3c-40a9-8e22-6099e0e16c9f" alt="A1 Opportunities Africa Banner" width="100%" style="border-radius:12px;" />
+</p>
+
+<h1 align="center">✈️ A1 Opportunities Africa</h1>
+<p align="center">
+  <i>Your trusted digital partner for international travel, study abroad programs, and visa assistance.</i>  
 </p>
 
 <p align="center">
-  🌍 Helping individuals unlock <b>life-changing global opportunities</b> through expert guidance & seamless digital experiences.
+  🌍 Unlock <b>life-changing global opportunities</b> through expert guidance and seamless digital experiences.  
 </p>
-
----
-
-## 🌟 About the Project  
-
-**A1 Opportunities Africa** is a responsive, elegant web platform built with **React + Vite** and styled using **Tailwind CSS**.  
-
-It provides clients with:  
-✔️ Clear service information  
-✔️ Smooth navigation  
-✔️ Engaging user experience  
 
 ---
 
 ## 🚀 Live Demo  
 
-🔗 **[View Website](https://a1-opportunities-africa.vercel.app/)**  
+<p align="center">
+  <a href="https://a1-opportunities-africa.vercel.app/">
+    <img src="https://img.shields.io/badge/🔗%20View%20Website-blue?style=for-the-badge&logo=vercel" alt="Live Demo" />
+  </a>
+</p>
 
 ---
 
 ## ✨ Features  
 
-- 💻 Fully **responsive design** for all devices  
-- 🌐 **Multi-page navigation** with React Router  
-- 🎥 Hero section with **animated title + video/image**  
-- ✉️ **Interactive contact form** (EmailJS + animations)  
-- ⭐ **Client testimonials** with star ratings  
-- 📞 Integrated **WhatsApp widget + social links**  
-- 🎨 Utility-first styling with **Tailwind CSS**  
-- 🔗 **Deployed on Vercel** with GitHub integration  
+✅ Responsive design for all devices  
+✅ Smooth multi-page navigation (React Router)  
+✅ Hero section with **animated title + video/image**  
+✅ EmailJS-powered **interactive contact form**  
+✅ SweetAlert2 & Framer Motion animations  
+✅ Testimonials with **star ratings & client feedback**  
+✅ WhatsApp widget + social links  
+✅ Deployed on **Vercel** with continuous GitHub integration  
 
 ---
 
 ## 🧱 Tech Stack  
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,vite,tailwind,vercel,git,github" height="50" />
+</p>
 
 | Category        | Tools / Libraries                  |  
 |-----------------|-----------------------------------|  
@@ -56,36 +57,35 @@ It provides clients with:
 ## 🗂️ Pages Overview  
 
 ### 🏠 Home  
-✨ Hero section with animated heading + CTA buttons  
-✨ Service highlights preview  
+🔹 Hero section with animated heading + CTAs  
+🔹 Services preview  
 ![Home Page](https://github.com/user-attachments/assets/e1b9b9eb-2b3c-40a9-8e22-6099e0e16c9f)  
 
 ---
 
 ### 👨‍💼 About Us  
-✨ Company history + journey  
-✨ Mission & Vision (two-column layout with images)  
+🔹 Brief company history  
+🔹 Mission & Vision (two-column layout)  
 ![About Page](https://github.com/user-attachments/assets/556e0551-d496-40a9-8fbc-8e1c0e694a12)  
 
 ---
 
 ### 📋 Services  
-✨ Visa assistance, study abroad guidance, travel consultation  
-✨ Modern **cards layout** with CTA buttons  
+🔹 Visa assistance, study abroad, travel consultation  
+🔹 Modern **card layout** with CTAs  
 ![Services Page](https://github.com/user-attachments/assets/497dad4d-4c15-4db1-9bae-4698d0f6072d)  
 
 ---
 
 ### 🤝 Contact  
-✨ **EmailJS-powered contact form**  
-✨ Animated inputs + SweetAlert2 confirmations  
+🔹 EmailJS-powered form  
+🔹 SweetAlert2 confirmation messages  
 ![Contact Page](https://github.com/user-attachments/assets/758f19e6-6a2f-4d42-a8ae-3563d926f43a)  
 
 ---
 
 ### ⭐ Testimonials  
-✨ Showcase of happy clients  
-✨ Photos, star ratings, names & feedback  
+🔹 Happy clients with photos, ratings & feedback  
 ![Testimonials](https://github.com/user-attachments/assets/3fdfedc0-e310-4334-9e4c-8d087d14f55f)  
 
 ---
