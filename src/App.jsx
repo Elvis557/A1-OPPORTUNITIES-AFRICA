@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ChatWidget from "./components/AIChatbot";
 
 // Public Pages
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import AboutUs from "./pages/AboutUs";
 import Servicespage from "./pages/Servicespage";
-import NotFound from "./pages/NotFound.jsx"; // ✅ Fixed casing
+import NotFound from "./pages/Notfound";
 
 // Admin Pages
 import LoginPage from "./pages/LoginPage";
@@ -43,7 +44,8 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-      <Footer />
+  <ChatWidget />
+  <Footer />
     </Router>
   );
 }
