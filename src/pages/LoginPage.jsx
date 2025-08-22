@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // ✅ Import useNavigate
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 export default function AdminLogin() {
   const [username, setUsername] = useState('admin');
@@ -7,9 +7,9 @@ export default function AdminLogin() {
   const [showDemo, setShowDemo] = useState(true);
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
-  const [toastType, setToastType] = useState('success'); // 'success' or 'error'
+  const [toastType, setToastType] = useState('success'); 
 
-  const navigate = useNavigate(); // ✅ Use React Router navigate
+  const navigate = useNavigate(); 
 
   // Toast functionality
   const showToastMessage = (title, description = '', type = 'success') => {
@@ -21,12 +21,12 @@ export default function AdminLogin() {
 
   const handleLogin = () => {
     if (username === "admin" && password === "admin123") {
-      // ✅ Store login state
+      // Store login state
       localStorage.setItem("isAdminLoggedIn", true);
 
       showToastMessage("Login Successful", "", "success");
 
-      // ✅ Redirect to dashboard after toast
+      //  Redirect to dashboard after toast
       setTimeout(() => navigate("/dashboard"), 1000);
     } else {
       showToastMessage("Login Failed", "Invalid username or password", "error");
@@ -122,38 +122,8 @@ export default function AdminLogin() {
             </button>
           </div>
 
-          {showDemo && (
-            <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-sm font-medium text-gray-900">Demo Credentials:</h3>
-                <button
-                  onClick={() => setShowDemo(false)}
-                  className="text-gray-400 hover:text-gray-600"
-                >
-                  ×
-                </button>
-              </div>
-              <div className="space-y-1 text-sm text-gray-600">
-                <p>Username: admin</p>
-                <p>Password: admin123</p>
-              </div>
-              <button
-                onClick={handleDemoLogin}
-                className="mt-2 text-sm text-blue-600 hover:text-blue-800 font-medium"
-              >
-                Use demo credentials
-              </button>
-            </div>
-          )}
 
-          <div className="mt-6 text-center">
-            <a
-              href="#"
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              Forgot your password?
-            </a>
-          </div>
+        
         </div>
       </div>
     </div>
