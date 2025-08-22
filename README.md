@@ -1,7 +1,12 @@
 <!-- Banner / Cover -->
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c9bd535d-2388-4eb6-a8c4-9c5cb78a5bf0" alt="A1 Opportunities Africa Banner" width="250px" height="250px" style="border-radius:12px;" />
+  <img src="https://github.com/user-attachments/assets/c9bd535d-2388-4eb6-a8c4-9c5cb78a5bf0" 
+       alt="A1 Opportunities Africa Banner" 
+       width="250px" 
+       height="250px" 
+       style="border-radius:50%;" />
 </p>
+
 
 <h1 align="center">✈️ A1 Opportunities Africa</h1>
 <p align="center">
