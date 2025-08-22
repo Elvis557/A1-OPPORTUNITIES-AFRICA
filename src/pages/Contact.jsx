@@ -258,7 +258,6 @@ const Contact = () => {
         ></iframe>
       </section>
 
-      <Footer />
     </>
   );
 };
