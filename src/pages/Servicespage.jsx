@@ -92,7 +92,6 @@ const Servicepages = () => {
           </div>
       </section>
 
-      <Footer />
     </>
   );
 };
