@@ -9,7 +9,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import AboutUs from "./pages/AboutUs";
 import Servicespage from "./pages/Servicespage";
-import Notfound from "./pages/NotFound";
+import Notfound from "./pages/NotFound.jsx";
 
 // Admin Pages
 import LoginPage from "./pages/LoginPage";
