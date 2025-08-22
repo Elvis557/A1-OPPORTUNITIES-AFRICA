@@ -15,7 +15,7 @@ const AboutUs = () => {
         showHighlight={false}
         showSubtitle={false}
         showDots={false}
-        alignLeft={true} // Align heading left for consistency
+        alignLeft={true} 
         alignRight={false}
       />
 
@@ -127,7 +127,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 };
