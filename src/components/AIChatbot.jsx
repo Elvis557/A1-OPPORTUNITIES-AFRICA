@@ -8,7 +8,44 @@ const ChatWidget = () => {
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [isHomePage, setIsHomePage] = useState(false);
   const messagesEndRef = useRef(null);
+
+  // Check if current page is homepage
+  useEffect(() => {
+    const checkHomePage = () => {
+      const currentPath = window.location.pathname;
+      // Show on homepage (root path) or if path is just "/"
+      setIsHomePage(currentPath === '/' || currentPath === '' || currentPath === '/home');
+    };
+
+    // Check initially
+    checkHomePage();
+
+    // Listen for route changes (for React Router)
+    const handleLocationChange = () => {
+      checkHomePage();
+    };
+
+    // Listen for popstate events (back/forward navigation)
+    window.addEventListener('popstate', handleLocationChange);
+    
+    // For React Router, you might also want to listen for route changes
+    // This will work if you're using React Router
+    const observer = new MutationObserver(() => {
+      checkHomePage();
+    });
+    
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    return () => {
+      window.removeEventListener('popstate', handleLocationChange);
+      observer.disconnect();
+    };
+  }, []);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -40,7 +77,7 @@ const ChatWidget = () => {
           body: JSON.stringify({
             model: 'llama3-8b-8192', // you can also use llama3-70b-8192
             messages: [
-              { role: 'system', content: 'You are a helpful AI assistant for a website chat widget. Keep responses concise and friendly.' },
+              { role: 'system', content: 'You are a helpful AI assistant for A1 Opportunities Africa. You help with job opportunities, visa applications, and CV support. Keep responses concise and friendly.' },
               { role: 'user', content: message }
             ],
             max_tokens: 200,
@@ -85,6 +122,11 @@ const ChatWidget = () => {
   const toggleChat = () => {
     setIsOpen(!isOpen);
   };
+
+  // Don't render anything if not on homepage
+  if (!isHomePage) {
+    return null;
+  }
 
   return (
     <>
