@@ -45,7 +45,7 @@ export default function AdminLogin() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 transform rotate-12 scale-110"></div>
       </div>
       
-      <div className="relative w-full max-w-md">
+      <div className="relative w-full max-w-md mt-24 mb-10">
         {/* Toast Notification */}
         {showToast && (
           <div className={`fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg border-l-4 ${
