@@ -48,11 +48,11 @@
   <img src="https://skillicons.dev/icons?i=react,vite,tailwind,vercel,git,github" height="50" />
 </p>
 
-| Category        | Tools / Libraries                  |  
+| Category        | Tools / Libraries                 |  
 |-----------------|-----------------------------------|  
 | **Frontend**    | React + Vite                      |  
-| **Styling**     | Tailwind CSS                      |  
-| **Routing**     | React Router                      |  
+| **Styling**     | Tailwind CSS, Chakra UI, Boostrap |  
+| **Routing**     | React Router Dom                  |  
 | **Animations**  | Framer Motion, SweetAlert2        |  
 | **Icons**       | React Icons                       |  
 | **Deployment**  | Vercel                            |  
