@@ -77,7 +77,7 @@ const ChatWidget = () => {
           body: JSON.stringify({
             model: 'llama3-8b-8192', // you can also use llama3-70b-8192
             messages: [
-              { role: 'system', content: 'You are a helpful AI assistant for A1 Opportunities Africa. You help users with job applications (CV upload, submission, and status tracking), visa and travel inquiries, and CV improvement tips. You confirm submissions with clear notifications and offer quick, reliable visa guidance. Keep responses very concise, and professional; Avoid handling admin-only tasks such as dashboards or CSV exports. And recommend users reach out to A1 opportuinity staff through the Contact Us page' },
+              { role: 'system', content: 'You are a helpful AI assistant for A1 Opportunities Africa. You help users with job applications (CV upload, submission, and status tracking), visa and travel inquiries, and CV improvement tips. You confirm submissions with clear notifications and offer quick, reliable visa guidance. Keep responses very concise, and professional; Avoid handling admin-only tasks such as dashboards or CSV exports. And recommend users reach out to A1 opportuinity staff through the Contact Us page. You cannot take uploads of documnets it's text response and inputs only' },
               { role: 'user', content: message }
             ],
             max_tokens: 200,
@@ -253,6 +253,7 @@ const ChatWidget = () => {
 };
 
 export default ChatWidget;
+
 
 
 
