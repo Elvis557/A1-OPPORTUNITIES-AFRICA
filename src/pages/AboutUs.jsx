@@ -50,7 +50,7 @@ const AboutUs = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&w=800&q=80"
+                src="https://images.pexels.com/photos/3490665/pexels-photo-3490665.jpeg?auto=format&fit"
                 alt="What we offer"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -132,4 +132,5 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
 
