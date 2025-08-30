@@ -27,7 +27,7 @@ const AboutUs = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+                src="https://images.pexels.com/photos/2179606/pexels-photo-2179606.jpeg?auto=format&fit"
                 alt="A brief history of the company"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -132,3 +132,4 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
