@@ -74,7 +74,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="A1 Opportunities Africa Logo"
-            className="h-12 w-12 rounded-full object-cover shadow-md hover:shadow-pink-300 hover:scale-105 transition duration-300"
+            className="h-12 w-12 rounded-full object-cover shadow-md hover:shadow-blue-300 hover:scale-105 transition duration-300"
             loading="lazy"
           />
           <span className="text-lg md:text-2xl font-bold uppercase tracking-wide text-gray-800 hover:text-blue-1000 transition duration-300">
@@ -91,13 +91,13 @@ const Navbar = () => {
                 <Link
                   to={path}
                   className={`relative group px-1 py-1 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-                    isActive ? 'text-pink-600 font-bold' : 'hover:text-pink-600'
+                    isActive ? 'text-blue-600 font-bold' : 'hover:text-blue-600'
                   }`}
                   aria-current={isActive ? 'page' : undefined}
                 >
                   {name}
                   <span
-                    className={`absolute left-0 bottom-0 h-[2px] bg-gradient-to-r from-blue-500 to-pink-500 transition-all duration-300 group-hover:w-full ${
+                    className={`absolute left-0 bottom-0 h-[2px] bg-gradient-to-r from-blue-500 to-blue-500 transition-all duration-300 group-hover:w-full ${
                       isActive ? 'w-full' : 'w-0'
                     }`}
                   />
@@ -181,3 +181,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
