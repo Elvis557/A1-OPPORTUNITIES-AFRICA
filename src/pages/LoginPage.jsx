@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 
 export default function AdminLogin() {
-  const [username, setUsername] = useState('admin');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [showDemo, setShowDemo] = useState(true);
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const [toastType, setToastType] = useState('success'); 
 
   const navigate = useNavigate(); 
+
+  // Load credentials from environment variables
+  const ADMIN_USERNAME = import.meta.env.VITE_ADMIN_USERNAME;
+  const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD;
 
   // Toast functionality
   const showToastMessage = (title, description = '', type = 'success') => {
@@ -20,32 +23,19 @@ export default function AdminLogin() {
   };
 
   const handleLogin = () => {
-    if (username === "admin" && password === "admin123") {
-      // Store login state
+    if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
       localStorage.setItem("isAdminLoggedIn", true);
-
       showToastMessage("Login Successful", "", "success");
-
-      //  Redirect to dashboard after toast
       setTimeout(() => navigate("/dashboard"), 1000);
     } else {
       showToastMessage("Login Failed", "Invalid username or password", "error");
     }
   };
 
-  const handleDemoLogin = () => {
-    setUsername('admin');
-    setPassword('admin123');
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-50 to-indigo-100 flex items-center justify-center p-4">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 transform rotate-12 scale-110"></div>
-      </div>
-      
       <div className="relative w-full max-w-md mt-24 mb-10">
+        
         {/* Toast Notification */}
         {showToast && (
           <div className={`fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg border-l-4 ${
@@ -69,6 +59,7 @@ export default function AdminLogin() {
             </div>
           </div>
         )}
+
         {/* Logo/Brand Section */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-900 text-white rounded-xl mb-4 shadow-lg">
@@ -79,7 +70,7 @@ export default function AdminLogin() {
         </div>
 
         {/* Login Form */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 backdrop-blur-sm border border-gray-100">
+        <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
           <div className="mb-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-2">Welcome Back</h2>
             <p className="text-gray-600">Sign in to access your admin dashboard</p>
@@ -122,8 +113,6 @@ export default function AdminLogin() {
             </button>
           </div>
 
-
-        
         </div>
       </div>
     </div>
