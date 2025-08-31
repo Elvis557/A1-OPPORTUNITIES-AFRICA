@@ -102,7 +102,7 @@ const AboutUs = () => {
             {/* CEO Profile */}
             <div className="flex flex-col items-center md:items-start space-y-4 md:ml-6">
               <img
-                src="https://tse4.mm.bing.net/th/id/OIP.fQun14Dh3vDFr644twZEHgHaH_?rs=1&pid=ImgDetMain&o=7&rm=3?auto=format&fit"
+                src="https://i1.rgstatic.net/ii/profile.image/1011757493542913-1618233192512_Q512/Adebola-Akinjokun.jpg?auto=format&fit"
                 alt="Mrs. Joyce Opoku, CEO"
                 className="rounded-full w-32 sm:w-40 md:w-48 h-32 sm:h-40 md:h-48 object-cover shadow-lg"
               />
@@ -132,6 +132,7 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
 
 
 
