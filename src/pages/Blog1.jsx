@@ -27,7 +27,7 @@ const Blog1 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.pexels.com/photos/2179606/pexels-photo-2179606.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/2182727/pexels-photo-2182727.jpeg?auto=format&fit"
                 alt="Start early"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -50,18 +50,18 @@ const Blog1 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.pexels.com/photos/3490665/pexels-photo-3490665.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/8850706/pexels-photo-8850706.jpeg?auto=format&fit"
                 alt="Check Requirements"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
             </div>
           </div>
 
-          {/* Row 3: Mission */}
+          {/* Row 3: Fill Forms Carefully */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                src="https://images.pexels.com/photos/8970296/pexels-photo-8970296.jpeg?auto=format&fit"
                 alt="Fill Forms Carefully"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -84,7 +84,7 @@ const Blog1 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=800&q=80"
+                src="https://images.pexels.com/photos/48148/document-agreement-documents-sign-48148.jpeg?auto=format&fit"
                 alt="Strong Documents"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -95,7 +95,7 @@ const Blog1 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.pexels.com/photos/2179606/pexels-photo-2179606.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/5699475/pexels-photo-5699475.jpeg?auto=format&fit"
                 alt="Interview Prep"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -118,7 +118,7 @@ const Blog1 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.pexels.com/photos/3490665/pexels-photo-3490665.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/9016996/pexels-photo-9016996.jpeg?auto=format&fit"
                 alt="Be Honest"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -129,7 +129,7 @@ const Blog1 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                src="https://images.pexels.com/photos/9016982/pexels-photo-9016982.jpeg?auto=format&fit"
                 alt="Stay Positive"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -151,5 +151,6 @@ const Blog1 = () => {
 };
 
 export default Blog1;
+
 
 
