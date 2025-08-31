@@ -27,7 +27,7 @@ const Blog2 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.pexels.com/photos/2179606/pexels-photo-2179606.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/760718/pexels-photo-760718.jpeg?auto=format&fit"
                 alt="Plan Ahead"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -50,18 +50,18 @@ const Blog2 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.pexels.com/photos/3490665/pexels-photo-3490665.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/4027658/pexels-photo-4027658.jpeg?auto=format&fit"
                 alt="Know the Rules"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
             </div>
           </div>
 
-          {/* Row 3: Mission */}
+          {/* Row 3: Complete Forms Correctly */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                src="https://images.pexels.com/photos/7821684/pexels-photo-7821684.jpeg?auto=format&fit"
                 alt="Complete Forms Correctly"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -84,7 +84,7 @@ const Blog2 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=800&q=80"
+                src="https://images.pexels.com/photos/7054757/pexels-photo-7054757.jpegI?auto=format&fit"
                 alt="Strong Documents"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -95,7 +95,7 @@ const Blog2 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.pexels.com/photos/2179606/pexels-photo-2179606.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/3874033/pexels-photo-3874033.jpeg?auto=format&fit"
                 alt="Secure Your Slot"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -118,7 +118,7 @@ const Blog2 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.pexels.com/photos/3490665/pexels-photo-3490665.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/5439368/pexels-photo-5439368.jpeg?auto=format&fit"
                 alt="Be Ready to Explain"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -129,7 +129,7 @@ const Blog2 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                src="https://images.pexels.com/photos/10029813/pexels-photo-10029813.jpeg?auto=format&fit"
                 alt="Stay Truthful"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -152,7 +152,7 @@ const Blog2 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.pexels.com/photos/3490665/pexels-photo-3490665.jpeg?auto=format&fit"
+                src="https://pixabay.com/illustrations/exchange-dialogue-communication-9387439?auto=format&fit"
                 alt="Keep a Positive Mindset"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -163,7 +163,7 @@ const Blog2 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                src="https://pixabay.com/photos/thought-cloud-idea-paper-cut-out-1014406?auto=format&fit"
                 alt="Final Thought"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -187,7 +187,7 @@ const Blog2 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.pexels.com/photos/3490665/pexels-photo-3490665.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/5816286/pexels-photo-5816286.jpeg?auto=format&fit"
                 alt="Need Assistance?"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -203,6 +203,7 @@ const Blog2 = () => {
 };
 
 export default Blog2;
+
 
 
 
