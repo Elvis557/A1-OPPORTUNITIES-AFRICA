@@ -4,14 +4,14 @@ import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import third from '../assets/third.jpg';
 
-const AboutUs = () => {
+const AboutUS = () => {
   return (
     <>
       <Navbar />
 
       <Hero
         images={[third]}
-        heading="About Us"
+        heading="Stress-Free Visa Application Tips"
         showHighlight={false}
         showSubtitle={false}
         showDots={false}
@@ -19,39 +19,39 @@ const AboutUs = () => {
         alignRight={false}
       />
 
-      {/* Section 1: History, Mission, Vision */}
+      {/* Section 1: Blog 1 */}
       <section className="bg-yellow-50 py-12 px-4 sm:px-6 lg:px-20 w-full">
         <div className="max-w-7xl mx-auto text-gray-800 space-y-16">
 
-          {/* Row 1: History */}
+          {/* Row 1: Start Early */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
                 src="https://images.pexels.com/photos/2179606/pexels-photo-2179606.jpeg?auto=format&fit"
-                alt="A brief history of the company"
+                alt="Start early"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
             </div>
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">A Brief History</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Start Early</h2>
               <p className="text-base sm:text-lg leading-relaxed">
-                Our story began with a vision to create lasting global impact through travel, education, and innovation. Since then, we’ve helped thousands achieve their dreams.
+                Applications usually require several important documents such as financial statements, admission letters, proof of travel plans, and accommodation details. These papers can take time to collect, and in some cases, you may need to request them from schools, banks, or employers. Starting early gives you plenty of time to prepare, identify any missing documents, and avoid last-minute stress. A checklist can also help you track your progress, ensuring nothing is overlooked before submission.
               </p>
             </div>
           </div>
 
-          {/* Row 2: What We Offer */}
+          {/* Row 2: Check Requirements */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="order-2 md:order-1">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">What We Offer</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Check Requirements</h2>
               <p className="text-base sm:text-lg leading-relaxed">
-                We provide expert visa assistance, educational consultancy, and personalized travel guidance tailored to your unique journey.
+                Visa rules are not the same everywhere, and requirements often change depending on your destination or purpose of travel. For example, a student visa will require proof of enrollment and financial resources, while a tourist visa may ask for hotel bookings or a return ticket. Because these details vary, it is important to check the official embassy or consulate website regularly. Relying only on old advice or blogs can lead to mistakes, so always confirm the latest updates before applying.
               </p>
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
                 src="https://images.pexels.com/photos/3490665/pexels-photo-3490665.jpeg?auto=format&fit"
-                alt="What we offer"
+                alt="Check Requirements"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
             </div>
@@ -62,74 +62,93 @@ const AboutUs = () => {
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
                 src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
-                alt="Our Mission"
+                alt="Fill Forms Carefully"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
             </div>
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Our Mission</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Fill Forms Carefully</h2>
               <p className="text-base sm:text-lg leading-relaxed">
-                To empower individuals through access to international opportunities that enhance lives and strengthen communities globally.
+                Mistakes on visa forms are one of the most common reasons for rejection or long delays in approval. Simple errors such as spelling names incorrectly, writing the wrong birth date, or mismatching details with your passport can create unnecessary complications. To avoid this, fill in the forms slowly and carefully, reviewing each section more than once. Before submitting, compare the details with your official documents to make sure everything matches. Asking a trusted friend or advisor to double-check your forms can also save you from errors.
               </p>
             </div>
           </div>
 
-          {/* Row 4: Vision */}
+          {/* Row 4: Strong Documents */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="order-2 md:order-1">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Our Vision</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Strong Documents</h2>
               <p className="text-base sm:text-lg leading-relaxed">
-                To be the most trusted and innovative travel consultancy, inspiring people to explore, learn, and grow without borders.
+                Your supporting documents are the backbone of your application and must clearly prove your eligibility to travel. For a student visa, this might include your official admission letter, proof of tuition payments, and evidence of financial support. For a tourist visa, you may need hotel bookings, a travel itinerary, and proof of ties to your home country such as employment or family responsibilities. Workers may need to include signed job contracts or employer letters. Ensuring that documents are accurate, complete, and easy to read greatly increases your chances of success.
               </p>
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
                 src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=800&q=80"
-                alt="Our Vision"
+                alt="Strong Documents"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Our Team Section */}
-      <section className="bg-gray-900 py-14 sm:py-16 px-4 sm:px-8 md:px-12 w-full">
-        <div className="max-w-7xl mx-auto text-white text-center md:text-left">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Our Team</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-4 sm:px-6 md:px-12">
-            {/* CEO Profile */}
-            <div className="flex flex-col items-center md:items-start space-y-4 md:ml-6">
+          {/* Row 1: Interview Prep */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&q=80"
-                alt="Jane Doe, CEO"
-                className="rounded-full w-32 sm:w-40 md:w-48 h-32 sm:h-40 md:h-48 object-cover shadow-lg"
+                src="https://images.pexels.com/photos/2179606/pexels-photo-2179606.jpeg?auto=format&fit"
+                alt="Interview Prep"
+                className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center md:text-left">
-                Jane Doe
-              </h3>
-              <p className="text-lg md:text-xl font-medium text-yellow-400 text-center md:text-left">
-                Chief Executive Officer
+            </div>
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Interview Prep</h2>
+              <p className="text-base sm:text-lg leading-relaxed">
+                Some visa types require you to attend an interview, which can make applicants nervous if they are not prepared. Practicing common questions in advance can help you feel more confident and comfortable. Be ready to explain your reason for travel, how you will support yourself financially, and what ties you have to your home country. Practicing with a friend or even speaking in front of a mirror can help you refine your answers. On the actual day, dress neatly, speak clearly, and remember that officials are mainly checking for honesty and consistency.
               </p>
             </div>
+          </div>
 
-            {/* Team Photo */}
-            <div className="rounded-lg overflow-hidden shadow-lg w-full">
+          {/* Row 2: Be Honest */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div className="order-2 md:order-1">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Be Honest</h2>
+              <p className="text-base sm:text-lg leading-relaxed">
+                While it may be tempting to hide information you think could weaken your case, dishonesty almost always leads to problems. Visa officers are trained to detect false or incomplete details, and even small inconsistencies can cause rejection. Providing incorrect information can also hurt your chances for future applications and may even result in a long-term travel ban. Instead, always be transparent about your situation, explain things clearly, and let your true purpose for travel show through your documents and answers.
+              </p>
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80"
-                alt="Our team working together"
-                className="w-full h-56 sm:h-64 md:h-72 lg:h-80 object-cover"
+                src="https://images.pexels.com/photos/3490665/pexels-photo-3490665.jpeg?auto=format&fit"
+                alt="Be Honest"
+                className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
             </div>
           </div>
 
+          {/* Row 3: Stay Positive */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div className="rounded-xl overflow-hidden shadow-md">
+              <img
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                alt="Stay Positive"
+                className="w-full h-56 sm:h-64 md:h-72 object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Stay Positive</h2>
+              <p className="text-base sm:text-lg leading-relaxed">
+                Feeling nervous during the visa process is natural, especially when the outcome is important for your studies, career, or travel plans. However, maintaining a positive attitude helps you stay focused and professional. Remember that millions of people successfully obtain visas every year, often facing the same challenges you are going through. By keeping calm, polite, and confident, you show officials that you are responsible and prepared. Positivity also helps you handle any unexpected requests or delays with grace.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
+
+      
 
     </>
   );
 };
 
-export default AboutUs;
+export default AboutUS;
 
