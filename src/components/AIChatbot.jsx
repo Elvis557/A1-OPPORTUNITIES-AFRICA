@@ -65,7 +65,7 @@ const ChatWidget = () => {
     setIsLoading(true);
 
     try {
-      const GROQ_API_KEY = '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';
+      const GROQ_API_KEY = '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';
 
       if (GROQ_API_KEY) {
         const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
@@ -253,6 +253,7 @@ const ChatWidget = () => {
 };
 
 export default ChatWidget;
+
 
 
 
