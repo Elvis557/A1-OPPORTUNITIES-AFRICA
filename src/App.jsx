@@ -12,6 +12,7 @@ import AboutUs from "./pages/AboutUs";
 import Servicespage from "./pages/Servicespage";
 import NotFound from "./pages/NotFound";
 import Blog1 from "./pages/Blog1";
+import Blog2 from "./pages/Blog2";
 
 // Admin Pages
 import LoginPage from "./pages/LoginPage";
@@ -30,6 +31,7 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/services" element={<Servicespage />} />
         <Route path="/blog1" element={<Blog1 />} />
+        <Route path="/blog2" element={<Blog2 />} />
 
         {/* Admin Routes */}
         <Route path="/login" element={<LoginPage />} />
