@@ -152,7 +152,7 @@ const Blog2 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://cdn.pixabay.com/photo/2025/02/06/12/49/exchange-9387439_1280.png?auto=format&fit"
+                src="https://images.pexels.com/photos/6146929/pexels-photo-6146929.jpeg?auto=format&fit"
                 alt="Keep a Positive Mindset"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -203,6 +203,7 @@ const Blog2 = () => {
 };
 
 export default Blog2;
+
 
 
 
