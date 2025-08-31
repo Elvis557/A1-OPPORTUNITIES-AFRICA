@@ -157,7 +157,7 @@ const ChatWidget = () => {
             <div className="flex items-center gap-2">
               <Bot className="w-5 h-5" />
               <span className="font-semibold">A1 Opportunities Africa</span>
-              <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
             </div>
             <button 
               onClick={toggleChat}
@@ -177,7 +177,7 @@ const ChatWidget = () => {
                 <div className={`flex items-start gap-2 max-w-xs ${message.sender === 'user' ? 'flex-row-reverse' : ''}`}>
                   <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
                     message.sender === 'user' 
-                      ? 'bg-orange-500 text-white' 
+                      ? 'bg-blue-500 text-white' 
                       : 'bg-gray-200 text-gray-600'
                   }`}>
                     {message.sender === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
@@ -185,7 +185,7 @@ const ChatWidget = () => {
                   <div
                     className={`p-3 rounded-lg ${
                       message.sender === 'user'
-                        ? 'bg-orange-500 text-white rounded-br-none'
+                        ? 'bg-blue-500 text-white rounded-br-none'
                         : 'bg-gray-100 text-gray-800 rounded-bl-none'
                     }`}
                   >
@@ -225,13 +225,13 @@ const ChatWidget = () => {
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSubmit(e)}
                 placeholder="Type your message..."
-                className="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
+                className="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
                 disabled={isLoading}
               />
               <button
                 onClick={handleSubmit}
                 disabled={isLoading || !inputValue.trim()}
-                className="bg-orange-500 text-white p-2 rounded-lg hover:bg-orange-600 disabled:bg-gray-300 transition-colors"
+                className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 disabled:bg-gray-300 transition-colors"
               >
                 <Send className="w-4 h-6" />
               </button>
@@ -243,7 +243,7 @@ const ChatWidget = () => {
       {/* Chat Button - Positioned above WhatsApp widget */}
       <button
         onClick={toggleChat}
-        className={`fixed bottom-36 right-4 w-14 h-14 bg-orange-500 text-white rounded-full shadow-lg hover:bg-orange-600 transition-all duration-300 z-[1000] flex items-center justify-center ${!isOpen ? 'pulse-animation' : ''}`}
+        className={`fixed bottom-36 right-4 w-14 h-14 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 z-[1000] flex items-center justify-center ${!isOpen ? 'pulse-animation' : ''}`}
         title="Chat with A1 Opportunities Africa"
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-9" />}
@@ -253,6 +253,7 @@ const ChatWidget = () => {
 };
 
 export default ChatWidget;
+
 
 
 
