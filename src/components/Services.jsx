@@ -31,24 +31,24 @@ const services = [
 // Clients List
 const clients = [
   {
-    name: "Sarah Johnson",
+    name: "Sarah Adei",
     feedback:
       "Thanks to A1 Opportunity, my visa process was smooth and hassle-free. Highly recommend!",
-    photo: "https://randomuser.me/api/portraits/women/44.jpg",
+    photo: "https://i1.wp.com/www.ghanacelebrities.com/wp-content/uploads/2017/03/amma-asante-Custom.jpg",
     rating: 5,
   },
   {
-    name: "Michael Lee",
+    name: "Michael Agbovi",
     feedback:
       "Excellent passport assistance service — quick and professional.",
-    photo: "https://randomuser.me/api/portraits/men/46.jpg",
+    photo: "https://thebftonline.com/wp-content/uploads/2023/05/Prince-Kojo-TABIRI-ESQ-e1685412559919.jpg",
     rating: 4,
   },
   {
-    name: "Emma Davis",
+    name: "Emma Davidson",
     feedback:
       "The one-on-one travel advice helped me plan a perfect trip. Super friendly team!",
-    photo: "https://randomuser.me/api/portraits/women/65.jpg",
+    photo: "https://i1.rgstatic.net/ii/profile.image/1148285993660416-1650784123555_Q512/Samuel-Opoku-3.jpg",
     rating: 5,
   },
 ];
@@ -211,5 +211,6 @@ const Services = () => {
 };
 
 export default Services;
+
 
 
