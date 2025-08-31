@@ -72,7 +72,8 @@
 ### 👨‍💼 About Us  
 🔹 Brief company history  
 🔹 Mission & Vision (two-column layout)  
-![About Page](https://github.com/user-attachments/assets/556e0551-d496-40a9-8fbc-8e1c0e694a12)  
+![About Page](https://github.com/user-attachments/assets/09e3edf9-c091-4f53-8005-1fc5f2c9213a)
+)  
 
 ---
 
