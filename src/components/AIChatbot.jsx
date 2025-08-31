@@ -243,7 +243,7 @@ const ChatWidget = () => {
       {/* Chat Button - Positioned above WhatsApp widget */}
       <button
         onClick={toggleChat}
-        className={`fixed bottom-36 right-4 w-14 h-14 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 z-[1000] flex items-center justify-center ${!isOpen ? 'pulse-animation' : ''}`}
+        className={`fixed bottom-36 left-4 w-14 h-14 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 z-[1000] flex items-center justify-center ${!isOpen ? 'pulse-animation' : ''}`}
         title="Chat with A1 Opportunities Africa"
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-9" />}
@@ -253,6 +253,7 @@ const ChatWidget = () => {
 };
 
 export default ChatWidget;
+
 
 
 
