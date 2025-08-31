@@ -56,63 +56,98 @@ const ChatWidget = () => {
   }, [messages]);
 
   // Groq API Integration
-  const sendMessage = async (message) => {
-    if (!message.trim()) return;
+ // Replace your sendMessage function with this improved version
 
-    const userMessage = { id: Date.now(), text: message, sender: 'user' };
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
-    setIsLoading(true);
+const sendMessage = async (message) => {
+  if (!message.trim()) return;
 
-    try {
-      const GROQ_API_KEY = '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';
+  const userMessage = { id: Date.now(), text: message, sender: 'user' };
+  setMessages(prev => [...prev, userMessage]);
+  setInputValue('');
+  setIsLoading(true);
 
-      if (GROQ_API_KEY) {
-        const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${GROQ_API_KEY}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            model: 'llama3-8b-8192', // you can also use llama3-70b-8192
-            messages: [
-              { role: 'system', content: "You are a helpful AI assistant for A1 Opportunities Africa. You assist with job applications (CV text input, submission, tracking), visa/travel queries, and CV tips. Confirm submissions clearly and give concise, professional replies (max 4 lines). Do not handle admin-only tasks or file uploads. Direct users to the Contact Us page for staff help. Do not respond to sensitive inputs. Avoid repetition unless requested. Always keep prior prompts in mind." },
-              { role: 'user', content: message }
-            ],
-            max_tokens: 200,
-            temperature: 0.7,
-          }),
-        });
+  try {
+    const GROQ_API_KEY = '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';
 
-        if (response.ok) {
-          const data = await response.json();
-          const botResponse = data.choices[0]?.message?.content || "I'm sorry, I couldn't process that.";
+    // Build conversation history for context
+    const conversationHistory = messages.map(msg => ({
+      role: msg.sender === 'user' ? 'user' : 'assistant',
+      content: msg.text
+    }));
 
-          const botMessage = { 
-            id: Date.now() + 1, 
-            text: botResponse, 
-            sender: 'bot' 
-          };
-          setMessages(prev => [...prev, botMessage]);
-          setIsLoading(false);
-          return;
-        } else {
-          throw new Error(`Groq API error: ${response.status}`);
-        }
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      const errorMessage = { 
-        id: Date.now() + 1, 
-        text: "Sorry, I'm having trouble connecting. Please check your API configuration.", 
-        sender: 'bot' 
-      };
-      setMessages(prev => [...prev, errorMessage]);
+    // Add current user message
+    conversationHistory.push({
+      role: 'user',
+      content: message
+    });
+
+    const requestBody = {
+      model: 'llama3-8b-8192', // Try changing to 'mixtral-8x7b-32768' if this fails
+      messages: [
+        { 
+          role: 'system', 
+          content: "You are a helpful AI assistant for A1 Opportunities Africa. You help users with job applications, visa and travel inquiries, and CV improvement tips. Keep responses concise and professional. Respond in max of 4 lines." 
+        },
+        ...conversationHistory.slice(-5) // Only send last 5 messages for context
+      ],
+      max_tokens: 150, // Reduced from 200
+      temperature: 0.7,
+    };
+
+    console.log('Sending request:', requestBody); // Debug log
+
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${GROQ_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
+    });
+
+    console.log('Response status:', response.status); // Debug log
+
+    if (!response.ok) {
+      const errorData = await response.text();
+      console.error('API Error Details:', errorData); // This will show you exactly what's wrong
+      throw new Error(`Groq API error: ${response.status} - ${errorData}`);
     }
 
-    setIsLoading(false);
-  };
+    const data = await response.json();
+    console.log('API Response:', data); // Debug log
+
+    const botResponse = data.choices?.[0]?.message?.content || "I'm sorry, I couldn't process that.";
+
+    const botMessage = { 
+      id: Date.now() + 1, 
+      text: botResponse, 
+      sender: 'bot' 
+    };
+    setMessages(prev => [...prev, botMessage]);
+
+  } catch (error) {
+    console.error('Full Error Details:', error);
+    
+    // More specific error messages
+    let errorText = "Sorry, I'm having trouble connecting.";
+    if (error.message.includes('400')) {
+      errorText = "There was an issue with the request format. Please try again.";
+    } else if (error.message.includes('401')) {
+      errorText = "API authentication failed. Please check the configuration.";
+    } else if (error.message.includes('429')) {
+      errorText = "Too many requests. Please wait a moment and try again.";
+    }
+
+    const errorMessage = { 
+      id: Date.now() + 1, 
+      text: errorText, 
+      sender: 'bot' 
+    };
+    setMessages(prev => [...prev, errorMessage]);
+  }
+
+  setIsLoading(false);
+};
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -253,6 +288,7 @@ const ChatWidget = () => {
 };
 
 export default ChatWidget;
+
 
 
 
