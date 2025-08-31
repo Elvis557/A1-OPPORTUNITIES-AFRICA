@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import AboutUs from "./pages/AboutUs";
 import Servicespage from "./pages/Servicespage";
 import NotFound from "./pages/NotFound";
+import Blog1 from "./pages/Blog1";
 
 // Admin Pages
 import LoginPage from "./pages/LoginPage";
