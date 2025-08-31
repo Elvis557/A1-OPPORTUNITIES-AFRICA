@@ -67,7 +67,11 @@ const blogPosts = [
   date: "August 1, 2025",
 },
   {
-    title: "How to Renew Your Passport Fast",
+    title: (
+    <Link to="/blog2">
+      "How to Renew Your Passport Fast"
+      </Link>
+  ),
     excerpt:
       "Avoid delays! Here's a guide on renewing your passport without the long queues.",
     image: img3,
@@ -203,3 +207,4 @@ const Services = () => {
 };
 
 export default Services;
+
