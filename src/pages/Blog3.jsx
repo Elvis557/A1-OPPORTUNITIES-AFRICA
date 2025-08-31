@@ -27,7 +27,7 @@ const Blog3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.pexels.com/photos/7176288/pexels-photo-7176288.jpeg?auto=format&center"
+                src="https://images.pexels.com/photos/7176288/pexels-photo-7176288.jpeg?auto=format&fit"
                 alt="Start with Your Needs"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -61,7 +61,7 @@ const Blog3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit"
+                src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit"
                 alt="Build a Clear Plan"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -84,7 +84,7 @@ const Blog3 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit"
+                src="https://images.pexels.com/photos/8068716/pexels-photo-8068716.jpeg?auto=format&fit"
                 alt="Strong Documents"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -95,7 +95,7 @@ const Blog3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.pexels.com/photos/2179606/pexels-photo-2179606.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/7176288/pexels-photo-7176288.jpeg?auto=format&fit"
                 alt="Prepare for Interviews"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -118,7 +118,7 @@ const Blog3 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.pexels.com/photos/3490665/pexels-photo-3490665.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/7551644/pexels-photo-7551644.jpeg?auto=format&fit"
                 alt="Honest Guidance"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -129,7 +129,7 @@ const Blog3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit"
+                src="https://images.unsplash.com/photo-1507652955-f3dcef5a3be5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit"
                 alt="Stress-Free Confidence"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -152,27 +152,10 @@ const Blog3 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.pexels.com/photos/3490665/pexels-photo-3490665.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/3228685/pexels-photo-3228685.jpeg?auto=format&fit"
                 alt="Need Assistance?"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
-            </div>
-          </div>
-
-          {/* Row 3: Need Assistance? */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div className="rounded-xl overflow-hidden shadow-md">
-              <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit"
-                alt="Need Assistance?"
-                className="w-full h-56 sm:h-64 md:h-72 object-cover"
-              />
-            </div>
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">Need Assistance?</h2>
-              <p className="text-base sm:text-lg leading-relaxed">
-                At A1 Opportunities, we specialize in personalized travel guidance designed around your goals. From preparing documents to offering interview support, our one-on-one consultations give you the tools to succeed. With our expertise, you can plan your trip with peace of mind and avoid unnecessary setbacks.
-              </p>
             </div>
           </div>
         </div>
@@ -185,6 +168,7 @@ const Blog3 = () => {
 };
 
 export default Blog3;
+
 
 
 
