@@ -84,7 +84,7 @@ const Blog2 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.pexels.com/photos/7054757/pexels-photo-7054757.jpegI?auto=format&fit"
+                src="https://images.pexels.com/photos/7054757/pexels-photo-7054757.jpeg?auto=format&fit"
                 alt="Strong Documents"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -152,7 +152,7 @@ const Blog2 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://pixabay.com/illustrations/exchange-dialogue-communication-9387439?auto=format&fit"
+                src="https://cdn.pixabay.com/photo/2025/02/06/12/49/exchange-9387439_1280.png?auto=format&fit"
                 alt="Keep a Positive Mindset"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -163,7 +163,7 @@ const Blog2 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://pixabay.com/photos/thought-cloud-idea-paper-cut-out-1014406?auto=format&fit"
+                src="https://cdn.pixabay.com/photo/2015/10/30/16/40/thought-1014406_1280.jpg"
                 alt="Final Thought"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -203,6 +203,7 @@ const Blog2 = () => {
 };
 
 export default Blog2;
+
 
 
 
