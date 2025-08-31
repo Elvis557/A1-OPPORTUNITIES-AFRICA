@@ -102,7 +102,7 @@ const AboutUs = () => {
             {/* CEO Profile */}
             <div className="flex flex-col items-center md:items-start space-y-4 md:ml-6">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D22AQGnLjstXxTYyA/feedshare-shrink_2048_1536/B4DZiekjh6HsAs-/0/1755007054736?e=1759363200&v=beta&t=jzZBHm8wRrYc4z8u-EodZaKxVWI20YjPMTgfkx4jeJk?auto=format&fit"
+                src="https://tse4.mm.bing.net/th/id/OIP.CWojtkYJKb0aUgalpm26iQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3?auto=format&fit"
                 alt="Mrs. Joyce Opoku, CEO"
                 className="rounded-full w-32 sm:w-40 md:w-48 h-32 sm:h-40 md:h-48 object-cover shadow-lg"
               />
@@ -117,7 +117,7 @@ const AboutUs = () => {
             {/* Our Team */}
             <div className="rounded-lg overflow-hidden shadow-lg w-full">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D22AQGnLjstXxTYyA/feedshare-shrink_2048_1536/B4DZiekjh6HsAs-/0/1755007054736?e=1759363200&v=beta&t=jzZBHm8wRrYc4z8u-EodZaKxVWI20YjPMTgfkx4jeJk?auto=format&fit"
+                src="https://tse4.mm.bing.net/th/id/OIP.CWojtkYJKb0aUgalpm26iQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3?auto=format&fit"
                 alt="Our team working together"
                 className="w-full h-56 sm:h-64 md:h-72 lg:h-80 object-cover"
               />
@@ -132,5 +132,6 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
 
 
