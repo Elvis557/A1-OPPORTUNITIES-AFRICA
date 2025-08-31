@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
-import third from '../assets/third.jpg';
+import sixth from '../assets/sixth.jpg';
 
 const Blog3 = () => {
   return (
@@ -10,7 +10,7 @@ const Blog3 = () => {
       <Navbar />
 
       <Hero
-        images={[third]}
+        images={[sixth]}
         heading="Why One-on-One Travel Advice Matters"
         showHighlight={false}
         showSubtitle={false}
@@ -185,4 +185,5 @@ const Blog3 = () => {
 };
 
 export default Blog3;
+
 
