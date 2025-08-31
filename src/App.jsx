@@ -13,6 +13,7 @@ import Servicespage from "./pages/Servicespage";
 import NotFound from "./pages/NotFound";
 import Blog1 from "./pages/Blog1";
 import Blog2 from "./pages/Blog2";
+import Blog3 from "./pages/Blog3";
 
 // Admin Pages
 import LoginPage from "./pages/LoginPage";
@@ -30,8 +31,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/services" element={<Servicespage />} />
-        <Route path="/blog1" element={<Blog1 />} />
-        <Route path="/blog2" element={<Blog2 />} />
+        <Route path="/top-5-visa-tips" element={<Blog1 />} />
+        <Route path="/renew-passport-fast" element={<Blog2 />} />
+        <Route path="/one-on-one-travel-advice" element={<Blog3 />} />
 
         {/* Admin Routes */}
         <Route path="/login" element={<LoginPage />} />
