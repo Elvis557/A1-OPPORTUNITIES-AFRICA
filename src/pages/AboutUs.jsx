@@ -102,12 +102,12 @@ const AboutUs = () => {
             {/* CEO Profile */}
             <div className="flex flex-col items-center md:items-start space-y-4 md:ml-6">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4E03AQGW2F7wWwnYzw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1708212874808?e=1759363200&v=beta&t=8XB8B5aAj8UuY4UGehobjkS6-TUv7VGAtfR_1LjJXM8?auto=format&fit"
+                src="https://media.licdn.com/dms/image/v2/D4D22AQGnLjstXxTYyA/feedshare-shrink_2048_1536/B4DZiekjh6HsAs-/0/1755007054736?e=1759363200&v=beta&t=jzZBHm8wRrYc4z8u-EodZaKxVWI20YjPMTgfkx4jeJk?auto=format&fit"
                 alt="Mrs. Joyce Opoku, CEO"
                 className="rounded-full w-32 sm:w-40 md:w-48 h-32 sm:h-40 md:h-48 object-cover shadow-lg"
               />
               <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center md:text-left">
-                Jane Doe
+                Mrs. Joyce Opoku
               </h3>
               <p className="text-lg md:text-xl font-medium text-yellow-400 text-center md:text-left">
                 Chief Executive Officer
