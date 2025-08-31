@@ -80,7 +80,8 @@
 ### 📋 Services  
 🔹 Visa assistance, study abroad, travel consultation  
 🔹 Modern **card layout** with CTAs  
-![Services Page](https://github.com/user-attachments/assets/497dad4d-4c15-4db1-9bae-4698d0f6072d)  
+![Services Page](https://github.com/user-attachments/assets/f26262c4-dd68-4239-a0ef-10b6788d015a)
+)  
 
 ---
 
