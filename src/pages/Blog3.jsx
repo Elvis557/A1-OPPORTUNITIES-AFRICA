@@ -27,7 +27,7 @@ const Blog3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.pexels.com/photos/2179606/pexels-photo-2179606.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/7176288/pexels-photo-7176288.jpeg?auto=format&fit"
                 alt="Start with Your Needs"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -50,7 +50,7 @@ const Blog3 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.pexels.com/photos/3490665/pexels-photo-3490665.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/3153199/pexels-photo-3153199.jpeg?auto=format&fit"
                 alt="Navigate Complex Rules"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -61,7 +61,7 @@ const Blog3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit"
                 alt="Build a Clear Plan"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -84,7 +84,7 @@ const Blog3 = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit"
                 alt="Strong Documents"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -129,7 +129,7 @@ const Blog3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit"
                 alt="Stress-Free Confidence"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -163,7 +163,7 @@ const Blog3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit"
                 alt="Need Assistance?"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -185,5 +185,6 @@ const Blog3 = () => {
 };
 
 export default Blog3;
+
 
 
