@@ -27,7 +27,7 @@ const Blog3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.pexels.com/photos/7176288/pexels-photo-7176288.jpeg?auto=format&fit"
+                src="https://images.pexels.com/photos/7176288/pexels-photo-7176288.jpeg?auto=format&center"
                 alt="Start with Your Needs"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -185,6 +185,7 @@ const Blog3 = () => {
 };
 
 export default Blog3;
+
 
 
 
