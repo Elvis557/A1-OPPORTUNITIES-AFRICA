@@ -55,99 +55,97 @@ const ChatWidget = () => {
     scrollToBottom();
   }, [messages]);
 
-  // Groq API Integration
- // Replace your sendMessage function with this improved version
+  // Groq API Integration - CORRECTED VERSION
+  const sendMessage = async (message) => {
+    if (!message.trim()) return;
 
-const sendMessage = async (message) => {
-  if (!message.trim()) return;
+    const userMessage = { id: Date.now(), text: message, sender: 'user' };
+    setMessages(prev => [...prev, userMessage]);
+    setInputValue('');
+    setIsLoading(true);
 
-  const userMessage = { id: Date.now(), text: message, sender: 'user' };
-  setMessages(prev => [...prev, userMessage]);
-  setInputValue('');
-  setIsLoading(true);
+    try {
+      const GROQ_API_KEY = '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';
 
-  try {
-    const GROQ_API_KEY = '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';
+      // Build conversation history for context
+      const conversationHistory = messages.map(msg => ({
+        role: msg.sender === 'user' ? 'user' : 'assistant',
+        content: msg.text
+      }));
 
-    // Build conversation history for context
-    const conversationHistory = messages.map(msg => ({
-      role: msg.sender === 'user' ? 'user' : 'assistant',
-      content: msg.text
-    }));
+      // Add current user message
+      conversationHistory.push({
+        role: 'user',
+        content: message
+      });
 
-    // Add current user message
-    conversationHistory.push({
-      role: 'user',
-      content: message
-    });
+      const requestBody = {
+        model: 'llama-3.1-8b-instant',
+        messages: [
+          { 
+            role: 'system', 
+            content: "You are a helpful AI assistant for A1 Opportunities Africa. You help users with job applications, visa and travel inquiries, and CV improvement tips. Keep responses concise and professional. Respond in max of 4 lines. If the question isn't related to your stated functions respond 'I can't assist with that request'. Strictly do not provide assistance on any topic outside your given functions. Remember the previous text input and response when replying." 
+          },
+          ...conversationHistory.slice(-5) // Only send last 5 messages for context
+        ],
+        max_tokens: 150,
+        temperature: 0.7,
+      };
 
-    const requestBody = {
-      model: 'llama-3.1-8b-instant', // Try changing to 'mixtral-8x7b-32768' if this fails
-      messages: [
-        { 
-          role: 'system', 
-          content: "You are a helpful AI assistant for A1 Opportunities Africa. You help users with job applications, visa and travel inquiries, and CV improvement tips. Keep responses concise and professional. Respond in max of 4 lines. if the question isn't related to your stated functions respond "I can't assist with that request". Strictly do not provide assistance on any topic outside your given functions. Remember the previous text input and response when replying" 
+      console.log('Sending request:', requestBody); // Debug log
+
+      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${GROQ_API_KEY}`,
+          'Content-Type': 'application/json',
         },
-        ...conversationHistory.slice(-5) // Only send last 5 messages for context
-      ],
-      max_tokens: 150, // Reduced from 200
-      temperature: 0.7,
-    };
+        body: JSON.stringify(requestBody),
+      });
 
-    console.log('Sending request:', requestBody); // Debug log
+      console.log('Response status:', response.status); // Debug log
 
-    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${GROQ_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(requestBody),
-    });
+      if (!response.ok) {
+        const errorData = await response.text();
+        console.error('API Error Details:', errorData);
+        throw new Error(`Groq API error: ${response.status} - ${errorData}`);
+      }
 
-    console.log('Response status:', response.status); // Debug log
+      const data = await response.json();
+      console.log('API Response:', data); // Debug log
 
-    if (!response.ok) {
-      const errorData = await response.text();
-      console.error('API Error Details:', errorData); // This will show you exactly what's wrong
-      throw new Error(`Groq API error: ${response.status} - ${errorData}`);
+      const botResponse = data.choices?.[0]?.message?.content || "I'm sorry, I couldn't process that.";
+
+      const botMessage = { 
+        id: Date.now() + 1, 
+        text: botResponse, 
+        sender: 'bot' 
+      };
+      setMessages(prev => [...prev, botMessage]);
+
+    } catch (error) {
+      console.error('Full Error Details:', error);
+      
+      // More specific error messages
+      let errorText = "Sorry, I'm having trouble connecting.";
+      if (error.message.includes('400')) {
+        errorText = "There was an issue with the request format. Please try again.";
+      } else if (error.message.includes('401')) {
+        errorText = "API authentication failed. Please check the configuration.";
+      } else if (error.message.includes('429')) {
+        errorText = "Too many requests. Please wait a moment and try again.";
+      }
+
+      const errorMessage = { 
+        id: Date.now() + 1, 
+        text: errorText, 
+        sender: 'bot' 
+      };
+      setMessages(prev => [...prev, errorMessage]);
     }
 
-    const data = await response.json();
-    console.log('API Response:', data); // Debug log
-
-    const botResponse = data.choices?.[0]?.message?.content || "I'm sorry, I couldn't process that.";
-
-    const botMessage = { 
-      id: Date.now() + 1, 
-      text: botResponse, 
-      sender: 'bot' 
-    };
-    setMessages(prev => [...prev, botMessage]);
-
-  } catch (error) {
-    console.error('Full Error Details:', error);
-    
-    // More specific error messages
-    let errorText = "Sorry, I'm having trouble connecting.";
-    if (error.message.includes('400')) {
-      errorText = "There was an issue with the request format. Please try again.";
-    } else if (error.message.includes('401')) {
-      errorText = "API authentication failed. Please check the configuration.";
-    } else if (error.message.includes('429')) {
-      errorText = "Too many requests. Please wait a moment and try again.";
-    }
-
-    const errorMessage = { 
-      id: Date.now() + 1, 
-      text: errorText, 
-      sender: 'bot' 
-    };
-    setMessages(prev => [...prev, errorMessage]);
-  }
-
-  setIsLoading(false);
-};
+    setIsLoading(false);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -288,20 +286,3 @@ const sendMessage = async (message) => {
 };
 
 export default ChatWidget;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
