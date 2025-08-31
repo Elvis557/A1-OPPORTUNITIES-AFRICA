@@ -94,7 +94,7 @@
 
 ### ⭐ Testimonials  
 🔹 Happy clients with photos, ratings & feedback  
-![Testimonials](https://github.com/user-attachments/assets/3fdfedc0-e310-4334-9e4c-8d087d14f55f)  
+![Testimonials](https://github.com/user-attachments/assets/85aeeced-576c-4873-a55f-9eff23ae6b85)  
 
 ---
 
