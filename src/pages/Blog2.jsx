@@ -11,7 +11,7 @@ const Blog2 = () => {
 
       <Hero
         images={[third]}
-        heading="Stress-Free Visa Application Tips"
+        heading="Avoid Delays! Here’s a Guide on Renewing Your Passport Without the Long Queues"
         showHighlight={false}
         showSubtitle={false}
         showDots={false}
@@ -203,4 +203,5 @@ const Blog2 = () => {
 };
 
 export default Blog2;
+
 
