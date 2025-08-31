@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
-import third from '../assets/third.jpg';
+import fourth from '../assets/fourth.jpg';
 
 const Blog2 = () => {
   return (
@@ -10,7 +10,7 @@ const Blog2 = () => {
       <Navbar />
 
       <Hero
-        images={[third]}
+        images={[fourth]}
         heading="Avoid Delays! Here’s a Guide on Renewing Your Passport Without the Long Queues"
         showHighlight={false}
         showSubtitle={false}
@@ -203,5 +203,6 @@ const Blog2 = () => {
 };
 
 export default Blog2;
+
 
 
