@@ -57,7 +57,7 @@ const clients = [
 const blogPosts = [
   {
   title: (
-    <Link to="/blog1">
+    <Link to="/top-5-visa-tips">
       Top 5 Visa Tips You Should Know
     </Link>
   ),
@@ -68,7 +68,7 @@ const blogPosts = [
 },
   {
     title: (
-    <Link to="/blog2">
+    <Link to="/renew-passport-fast">
       "How to Renew Your Passport Fast"
       </Link>
   ),
@@ -78,7 +78,11 @@ const blogPosts = [
     date: "July 28, 2025",
   },
   {
-    title: "Why One-on-One Travel Advice Matters",
+    title: (
+    <Link to="/one-on-one-travel-advice">
+      Why One-on-One Travel Advice Matters
+    </Link>
+  ),
     excerpt:
       "Discover how personalized travel consultations can make your journey smoother.",
     image: img,
@@ -207,4 +211,5 @@ const Services = () => {
 };
 
 export default Services;
+
 
