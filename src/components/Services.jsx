@@ -56,12 +56,16 @@ const clients = [
 // Blogs/News Data
 const blogPosts = [
   {
-    title: "Top 5 Visa Tips You Should Know",
-    excerpt:
-      "Get essential tips to make your visa application process stress-free and successful.",
-    image: img2,
-    date: "August 1, 2025",
-  },
+  title: (
+    <Link to="/blog1">
+      Top 5 Visa Tips You Should Know
+    </Link>
+  ),
+  excerpt:
+    "Get essential tips to make your visa application process stress-free and successful.",
+  image: img2,
+  date: "August 1, 2025",
+},
   {
     title: "How to Renew Your Passport Fast",
     excerpt:
