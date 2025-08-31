@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
-import third from '../assets/third.jpg';
+import fifth from '../assets/fifth.jpg';
 
 const Blog1 = () => {
   return (
@@ -10,7 +10,7 @@ const Blog1 = () => {
       <Navbar />
 
       <Hero
-        images={[third]}
+        images={[fifth]}
         heading="Stress-Free Visa Application Tips"
         showHighlight={false}
         showSubtitle={false}
@@ -151,4 +151,5 @@ const Blog1 = () => {
 };
 
 export default Blog1;
+
 
