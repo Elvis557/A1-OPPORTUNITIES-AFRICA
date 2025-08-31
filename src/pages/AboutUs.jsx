@@ -61,7 +61,7 @@ const AboutUs = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit"
                 alt="Our Mission"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -84,7 +84,7 @@ const AboutUs = () => {
             </div>
             <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
               <img
-                src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?auto=format&fit"
                 alt="Our Vision"
                 className="w-full h-56 sm:h-64 md:h-72 object-cover"
               />
@@ -102,8 +102,8 @@ const AboutUs = () => {
             {/* CEO Profile */}
             <div className="flex flex-col items-center md:items-start space-y-4 md:ml-6">
               <img
-                src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&q=80"
-                alt="Jane Doe, CEO"
+                src="https://media.licdn.com/dms/image/v2/D4E03AQGW2F7wWwnYzw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1708212874808?e=1759363200&v=beta&t=8XB8B5aAj8UuY4UGehobjkS6-TUv7VGAtfR_1LjJXM8?auto=format&fit"
+                alt="Mrs. Joyce Opoku, CEO"
                 className="rounded-full w-32 sm:w-40 md:w-48 h-32 sm:h-40 md:h-48 object-cover shadow-lg"
               />
               <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center md:text-left">
@@ -114,10 +114,10 @@ const AboutUs = () => {
               </p>
             </div>
 
-            {/* Team Photo */}
+            {/* Our Team */}
             <div className="rounded-lg overflow-hidden shadow-lg w-full">
               <img
-                src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80"
+                src="https://media.licdn.com/dms/image/v2/D4D22AQGnLjstXxTYyA/feedshare-shrink_2048_1536/B4DZiekjh6HsAs-/0/1755007054736?e=1759363200&v=beta&t=jzZBHm8wRrYc4z8u-EodZaKxVWI20YjPMTgfkx4jeJk?auto=format&fit"
                 alt="Our team working together"
                 className="w-full h-56 sm:h-64 md:h-72 lg:h-80 object-cover"
               />
@@ -132,4 +132,5 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
 
