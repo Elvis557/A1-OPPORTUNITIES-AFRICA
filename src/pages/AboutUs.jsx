@@ -102,7 +102,7 @@ const AboutUs = () => {
             {/* CEO Profile */}
             <div className="flex flex-col items-center md:items-start space-y-4 md:ml-6">
               <img
-                src="https://leadership.ng/wp-content/uploads/2022/12/Oladapo-amao.png?auto=format&fit"
+                src="https://tse4.mm.bing.net/th/id/OIP.fQun14Dh3vDFr644twZEHgHaH_?rs=1&pid=ImgDetMain&o=7&rm=3?auto=format&fit"
                 alt="Mrs. Joyce Opoku, CEO"
                 className="rounded-full w-32 sm:w-40 md:w-48 h-32 sm:h-40 md:h-48 object-cover shadow-lg"
               />
@@ -117,7 +117,7 @@ const AboutUs = () => {
             {/* Our Team */}
             <div className="rounded-lg overflow-hidden shadow-lg w-full">
               <img
-                src="https://media.licdn.com/dms/image/D4E22AQFqLMlCQbvCmg/feedshare-shrink_800/0/1684414231612?e=2147483647&v=beta&t=mphwFChqI9TV7e3M3CnfO_Mkw4VBvoGew9Xh8Efb7l0?auto=format&fit"
+                src="https://csa.gov.lr/wp-content/uploads/2022/05/20220228-PYPP-1-1024x683.jpg?auto=format&fit"
                 alt="Our team working together"
                 className="w-full h-56 sm:h-64 md:h-72 lg:h-80 object-cover"
               />
@@ -132,6 +132,7 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+
 
 
 
