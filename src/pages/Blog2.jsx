@@ -159,20 +159,20 @@ const Blog2 = () => {
             </div>
           </div>
 
-          {/* Row 2: Final Thought */}
+          {/* Row 3: Final Thought */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div className="order-2 md:order-1">
+            <div className="rounded-xl overflow-hidden shadow-md">
+              <img
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                alt="Final Thought"
+                className="w-full h-56 sm:h-64 md:h-72 object-cover"
+              />
+            </div>
+            <div>
               <h2 className="text-2xl sm:text-3xl font-bold mb-4">Final Thought</h2>
               <p className="text-base sm:text-lg leading-relaxed">
                 Although renewing a passport may seem complicated, it is much easier when approached step by step. Preparing documents early, following the latest rules, and submitting correct forms are the keys to a successful renewal. With honesty and patience, you’ll be ready to travel without the stress of last-minute surprises. Think of your renewed passport not as paperwork but as the key to new journeys, opportunities, and experiences waiting ahead.
               </p>
-            </div>
-            <div className="rounded-xl overflow-hidden shadow-md order-1 md:order-2">
-              <img
-                src="https://images.pexels.com/photos/3490665/pexels-photo-3490665.jpeg?auto=format&fit"
-                alt="Final Thought"
-                className="w-full h-56 sm:h-64 md:h-72 object-cover"
-              />
             </div>
           </div>
 
