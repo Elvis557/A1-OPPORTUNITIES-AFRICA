@@ -82,7 +82,7 @@ const sendMessage = async (message) => {
     });
 
     const requestBody = {
-      model: 'llama3-8b-8192', // Try changing to 'mixtral-8x7b-32768' if this fails
+      model: 'llama-3.1-8b-instant', // Try changing to 'mixtral-8x7b-32768' if this fails
       messages: [
         { 
           role: 'system', 
@@ -288,6 +288,7 @@ const sendMessage = async (message) => {
 };
 
 export default ChatWidget;
+
 
 
 
