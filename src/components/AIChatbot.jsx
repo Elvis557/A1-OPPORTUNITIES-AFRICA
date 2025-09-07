@@ -65,7 +65,7 @@ const ChatWidget = () => {
     setIsLoading(true);
 
     try {
-      const GROQ_API_KEY = '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';
+      const GROQ_API_KEY = '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';
 
       // Build conversation history for context
       const conversationHistory = messages.map(msg => ({
@@ -286,4 +286,5 @@ const ChatWidget = () => {
 };
 
 export default ChatWidget;
+
 
