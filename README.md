@@ -8,7 +8,7 @@
 </p>
 
 
-<h1 align="center">✈️ A1 Opportunities Africa.</h1>
+<h1 align="center">✈️ A1 Opportunities Africa</h1>
 <p align="center">
   <i>Your trusted digital partner for international travel, study abroad programs, and visa assistance.</i>  
 </p>
