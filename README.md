@@ -65,7 +65,7 @@
 🔹 Hero section with animated heading + CTAs  
 🔹 Services preview  
 ![Home Page](https://github.com/user-attachments/assets/acf0fb29-f8c2-4a0e-8792-099fa0294be9)
-)  
+
 
 ---
 
